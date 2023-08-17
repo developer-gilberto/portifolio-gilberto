@@ -1,2 +1,181 @@
-@charset "utf-8";
+@charset "UTF-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Poppins', 'Courier New', Courier, monospace, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root{
+    /*--b1: #000000;
+    --b2: #0f0f0f;
+    --b3: #1e1e1e;
+    --b4: #2d2d2d;
+    --b5: #3c3c3c;
+    --b6: #d3d3d3;*/
+
+    --cor-paragrafo: #fff;
+    --cor-destaque: #0AFFEB;
+    --cor-subtitulo: #778899;
+    --cor-secundaria: #1696FF;
+    --cor-background: #050710;
+    --cor-background-2: #0a0e24;
+    --cor-preto: #000;
+}
+
+/* CLASSE LIGHT MODE */
+
+/*.light{
+    --cor-paragrafo: #000;
+    --cor-destaque: #0AFFEB;
+    --cor-subtitulo: #778899;
+    --cor-secundaria: #1696FF;
+    --cor-background: #EDF1F4;
+    --cor-preto: #fff; 
+}*/
+
+/* HTML / BODY */
+
+html, body{
+    overflow-x: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--cor-background);
+}
+
+/* SCROLL BAR */
+
+::-webkit-scrollbar{
+    width: 0.3125rem;
+    background-color: var(--cor-background);
+}
+
+::-webkit-scrollbar-thumb{
+    width: 0.3125rem;
+    background-color: var(--cor-destaque);
+    border-radius: 0.625rem;
+}
+
+/* BOTÃO MENU HAMBURGUER*/
+
+#checkbox-open-close{
+    opacity: 0;
+}
+
+/* HEADER */
+
+header{
+    border: .0625rem solid var(--cor-destaque);
+    background-color: var(--cor-background-2);
+    padding: 3.125rem 1.25rem;
+    border-radius: 0 1.25rem 1.25rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    position: absolute;
+    top: 0;
+    left: -999px;
+    transition-duration: .5s;
+}
+
+.open-close{
+    color: var(--cor-destaque);
+    position: absolute;
+    padding: .3125rem;
+    user-select: none;
+    top: .625rem;
+    left: .625rem;
+    z-index: 1;
+    cursor: pointer;
+    border-radius: .625rem;
+}
+
+.open-close:hover{
+    box-shadow: 0 0 .625rem var(--cor-destaque);
+}
+
+#btn-burguer{
+    display: block;
+    font-size: 2.5rem;
+}
+
+#btn-x{
+    display: none;
+    font-size: 2.5rem;
+}
+
+.img-profile{
+    max-width: 12.5rem;
+    border-radius: 50%;
+    border: .0625rem solid var(--cor-destaque);
+    background-image: linear-gradient(to top, var(--cor-preto), var(--cor-background-2));
+
+    /* ANIMAR BORDA */
+}
+
+/* MAIN */
+
+main{
+    min-height: 100vh;
+}
+
+/* SECTION HOME */
+
+#home{
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.boas-vindas{
+    color: var(--cor-paragrafo);
+    font-size: 1.5625rem;
+    font-weight: 200;
+}
+
+.eu-sou{
+    color: var(--cor-subtitulo);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.gilberto-lopes{
+    color: var(--cor-destaque);
+    font-size: 4.75rem;
+    font-weight: 800;
+    line-height: 75px;
+    /* text-shadow: .0rem .0625rem .0625rem var(--cor-paragrafo); */
+}
+
+.chaves-full-stack{
+    color: var(--cor-secundaria);
+    font-weight: lighter;
+}
+
+.full-stack{
+    color: var(--cor-subtitulo);
+    font-size: 2.1rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+p{
+    color: var(--cor-paragrafo);
+}
+
+/* FOOTER */
+
+footer{
+    border-top: .0625rem solid var(--cor-destaque);
+}
