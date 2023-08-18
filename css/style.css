@@ -31,14 +31,14 @@
 
 /* CLASSE LIGHT MODE */
 
-/*.light{
+.light{
     --cor-paragrafo: #000;
-    --cor-destaque: #0AFFEB;
+    --cor-destaque: #050710;
     --cor-subtitulo: #778899;
     --cor-secundaria: #1696FF;
     --cor-background: #EDF1F4;
     --cor-preto: #fff; 
-}*/
+}
 
 /* HTML / BODY */
 
@@ -62,18 +62,13 @@ html, body{
     border-radius: 0.625rem;
 }
 
-/* BOTÃO MENU HAMBURGUER*/
-
-#checkbox-open-close{
-    opacity: 0;
-}
-
 /* HEADER */
 
 header{
-    border: .0625rem solid var(--cor-destaque);
-    background-color: var(--cor-background-2);
+    background-color: var(--cor-background);
+    box-shadow: .0625rem .3125rem 1.25rem var(--cor-destaque);
     padding: 3.125rem 1.25rem;
+    border: .0625rem solid var(--cor-destaque);
     border-radius: 0 1.25rem 1.25rem 0;
     display: flex;
     flex-direction: column;
@@ -84,6 +79,12 @@ header{
     top: 0;
     left: -999px;
     transition-duration: .5s;
+}
+
+/* BOTÃO MENU HAMBURGUER*/
+
+#checkbox-open-close{
+    opacity: 0;
 }
 
 .open-close{
@@ -112,13 +113,113 @@ header{
     font-size: 2.5rem;
 }
 
+/* IMG PROFILE */
+
 .img-profile{
-    max-width: 12.5rem;
+    max-width: 10rem;
     border-radius: 50%;
     border: .0625rem solid var(--cor-destaque);
     background-image: linear-gradient(to top, var(--cor-preto), var(--cor-background-2));
 
     /* ANIMAR BORDA */
+}
+
+/* EMAIL CONTATO */
+
+.container-email{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.625rem;
+}
+
+.container-email #icon_email{
+    color: var(--cor-subtitulo);
+    font-size: 1.375rem;
+}
+
+.container-email .email{
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* SOCIAIS */
+
+.sociais .bx{
+    color: var(--cor-destaque);
+    font-size: 2rem;
+    margin: .625rem .3125rem;
+}
+
+/* BOTÃO TEMA DARK/LIGHT */
+
+#checkbox-tema{
+    opacity: 0;
+}
+
+.button-tema{
+    background-color: transparent;
+    /* margin: .625rem .3125rem; */
+    margin-top: 1.625rem;
+    border: none;
+}
+
+#btn-lampada{
+    color: #c1c105;
+    padding: .3125rem;
+    border-radius: 50%;
+    transition: 1s;
+}
+
+#btn-lampada:hover{
+    color: #ffff13;
+    box-shadow: 0 0 .625rem #ffff13;
+    cursor: pointer;
+}
+
+#btn-moon{
+    background-color: #d3d3d3;
+    color: #808080;
+    padding: .3125rem;
+    border-radius: 50%;
+    transition: 1s;
+    display: none;
+}
+
+#btn-moon:hover{
+    color: #1327ff;
+    box-shadow: 0 0 .625rem #1327ff;
+    cursor: pointer;
+}
+
+/* LINKS MENU */
+
+li{
+    margin: .625rem 0;
+}
+
+ul .material-symbols-outlined{
+    color: var(--cor-subtitulo);
+    font-size: 1.5625rem;
+    margin-right: .3125rem;
+}
+
+header ul .links-menu{
+    color: var(--cor-subtitulo);
+    font-size: 1rem;
+    font-weight: bolder;
+    border: .0625rem solid transparent;
+    border-radius: 1.25rem;
+    padding: .3125rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    transition: .5s;
+}
+
+header ul .links-menu:hover{
+    color: var(--cor-destaque);
+    border: .0625rem solid var(--cor-destaque);
 }
 
 /* MAIN */
@@ -130,6 +231,9 @@ main{
 /* SECTION HOME */
 
 #home{
+    /* background-image: url(/img/hacker.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover; */
     height: 100vh;
     text-align: center;
     display: flex;
@@ -142,6 +246,7 @@ main{
     color: var(--cor-paragrafo);
     font-size: 1.5625rem;
     font-weight: 200;
+    max-width: 800px;
 }
 
 .eu-sou{
@@ -154,13 +259,14 @@ main{
     color: var(--cor-destaque);
     font-size: 4.75rem;
     font-weight: 800;
-    line-height: 75px;
+    /* line-height: 4.6875rem; */
     /* text-shadow: .0rem .0625rem .0625rem var(--cor-paragrafo); */
 }
 
 .chaves-full-stack{
     color: var(--cor-secundaria);
     font-weight: lighter;
+    font-style: normal;
 }
 
 .full-stack{
@@ -168,6 +274,15 @@ main{
     font-size: 2.1rem;
     font-weight: 700;
     font-style: italic;
+}
+
+.container-tecnologias{
+    margin: 1.25rem 0;
+}
+
+.container-tecnologias .bx{
+    color: rgba(211, 211, 211, 0.233);
+    font-size: 2.5rem;
 }
 
 p{

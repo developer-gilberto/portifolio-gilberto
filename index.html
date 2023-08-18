@@ -6,6 +6,7 @@
     <link rel="shortcut icon" href="icons-g/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Gilberto_Lopes</title>
 </head>
 <body>
@@ -23,19 +24,28 @@
 
         <img class="img-profile" src="img/gil-transparent-1x1.png" alt="Gilberto Lopes">
 
-        <p>Gilberto Lopes</p>
+        <div class="container-email">
+
+            <span id="icon_email" class="material-symbols-outlined">mail</span>
+            <p class="email">developer.gilberto@gmail.com</p>
+
+        </div>
 
         <section class="sociais">
 
-        </section>
-        
-        <button>
-            
-            <label for="checkbox">
-                
-                <span class="material-symbols-outlined">mode_night</span>
+            <i class='bx bxl-github'></i>
+            <i class='bx bxl-linkedin-square' ></i>
+            <i class='bx bxl-instagram' ></i>
 
-                <span class="material-symbols-outlined">emoji_objects</span>
+        </section>
+
+        <button class="button-tema">
+
+            <label for="checkbox-tema">
+                
+                <abbr title="APAGAR LUZ"><span id="btn-moon" class="material-symbols-outlined">mode_night</span></abbr>
+
+                <abbr title="ACENDER LUZ"><span id="btn-lampada" class="material-symbols-outlined">emoji_objects</span></abbr>
                 
             </label>
             
@@ -44,29 +54,34 @@
         <input type="checkbox" name="checkbox" id="checkbox-tema">
 
         <ul>
-            <li><a href="#" class="links-menu">
-                <span class="material-symbols-outlined">home</span>
-                HOME
+            <li>
+                <a href="#" class="links-menu">
+                    <span class="material-symbols-outlined">home</span>
+                    HOME
                 </a>
             </li>
-            <li><a href="#" class="links-menu">
-                <span class="material-symbols-outlined">emoji_people</span>
-                SOBRE MIM
+            <li>
+                <a href="#" class="links-menu">
+                    <span class="material-symbols-outlined">emoji_people</span>
+                    SOBRE MIM
                 </a>
             </li>
-            <li><a href="#" class="links-menu">
-                <span class="material-symbols-outlined">code</span>
-                SKILLS
+            <li>
+                <a href="#" class="links-menu">
+                    <span class="material-symbols-outlined">code</span>
+                    SKILLS
                 </a>
             </li>
-            <li><a href="#" class="links-menu">
-                <span class="material-symbols-outlined">architecture</span>
-                PROJETOS
+            <li>
+                <a href="#" class="links-menu">
+                    <span class="material-symbols-outlined">architecture</span>
+                    PROJETOS
                 </a>
             </li>
-            <li><a href="#" class="links-menu">
-                <span class="material-symbols-outlined">mail</span>
-                CONTATO
+            <li>
+                <a href="#" class="links-menu">
+                    <span class="material-symbols-outlined">mail</span>
+                    CONTATO
                 </a>
             </li>
         </ul>
@@ -77,10 +92,17 @@
 
         <section id="home">
 
-            <p class="boas-vindas">Muito prazer em te conhecer fulano</p>
+            <p class="boas-vindas">Olá,</p>
             <p class="eu-sou">Eu sou</p>
             <h1 class="gilberto-lopes">Gilberto Lopes!</h1>
             <p class="full-stack"><span class="chaves-full-stack">{</span> Full stack developer <span class="chaves-full-stack">}</span></p>
+
+            <div class="container-tecnologias">
+                <i class='bx bxl-html5'></i>
+                <i class='bx bxl-css3'></i>
+                <i class='bx bxl-javascript'></i>
+                <i class='bx bxl-nodejs'></i>
+            </div>
 
         </section>
 
