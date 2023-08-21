@@ -1,58 +1,72 @@
-//BOAS VINDAS
-
-let nomeUsuario = prompt('QUAL É O SEU NOME?');
-let msgOla = document.querySelector('.boas-vindas');
-
-if(nomeUsuario == null || undefined) {
-
-    msgOla.innerHTML= `<span style="color: var(--cor-destaque);" class="material-symbols-outlined">emoji_people</span>Olá! Estou feliz que você tenha reservado um tempinho para visitar meu site. Seja muito bem vindo(a). Espero que goste!`;
-
-} else {
-
-    msgOla.innerHTML = `<span style="color: var(--cor-destaque);" class="material-symbols-outlined">emoji_people</span>Olá <span style="color: var(--cor-destaque);"><strong>${nomeUsuario.toUpperCase()}</strong></span>, estou feliz que você tenha reservado um tempinho para visitar meu site. Seja muito bem vindo(a). Espero que goste!`;
-}
-
-// OPEN/CLOSE MENU
-
-let checkboxOpenClose = document.querySelector('#checkbox-open-close');
-let header = document.querySelector('#header');
-let iconBurguer = document.querySelector('#btn-burguer');
-let iconX = document.querySelector('#btn-x');
-
-checkboxOpenClose.addEventListener('click', () => {
-
-    if(checkboxOpenClose.checked == false) {
-
-        header.style.left = '0';
-        iconX.style.display = 'block';
-        iconBurguer.style.display = 'none';
-
-    } else {
-
-        header.style.left = '-999px';
-        iconX.style.display = 'none';
-        iconBurguer.style.display = 'block';
-    }
-});
-
 // TEMA DARK/LIGHT
 
-let checkboxTema = document.querySelector('#checkbox-tema');
-let lua = document.querySelector('#btn-moon');
-let lampada = document.querySelector('#btn-lampada');
+// DESKTOP
 
-checkboxTema.addEventListener('click', () => {
+let html = document.querySelector('html');
+let checkboxDesktop = document.querySelector('#checkbox-tema-desktop');
+let labelTemaDesktop = document.querySelector('#label-tema-desktop');
+let interruptor = document.querySelector('.interruptor');
 
-    if(checkboxTema.checked != true) {
-        
-        window.document.body.classList.toggle('light');
-        lampada.style.display = 'none';
-        lua.style.display = 'block';
-        
+labelTemaDesktop.addEventListener('click', () => {
+
+    if(checkboxDesktop.checked == true){
+
+        interruptor.style.transform = 'translateX(30px)';
+        html.classList.add('light');
     } else {
-        
-        window.document.body.classList.remove('light');
-        lampada.style.display = 'block';
-        lua.style.display = 'none';
+
+        interruptor.style.transform = 'translateX(0px)';
+        html.classList.remove('light');
     }
 });
+
+
+// MOBILE
+let checkboxMobile = document.querySelector('#checkbox-tema-mobile');
+let labelTemaMobile = document.querySelector('.label-tema-mobile');
+let interruptorMobile = document.querySelector('.div-ball-mobile');
+
+labelTemaMobile.addEventListener('click', () => {
+
+    if(checkboxMobile.checked == true){
+
+        interruptorMobile.style.transform = 'translateX(30px)';
+        html.classList.add('light');
+    } else {
+
+        interruptorMobile.style.transform = 'translateX(0px)';
+        html.classList.remove('light');
+    }
+});
+
+
+// ÍCONE MENU ANIMADO
+
+let iconMenuMobile = document.querySelector('#checkbox-menu-mobile');
+let menuMobile = document.querySelector('.nav-mobile');
+
+let span1 = document.querySelector('.span-1');
+let span2 = document.querySelector('.span-2');
+let span3 = document.querySelector('.span-3');
+
+
+iconMenuMobile.addEventListener('click', () => {
+
+    if(iconMenuMobile.checked != true){
+
+        menuMobile.style.transform = 'translateX(0)'
+        span1.classList.add('span-1-animado');
+        span2.classList.add('span-2-animado');
+        span3.classList.add('span-3-animado');
+    } else {
+
+        menuMobile.style.transform = 'translateX(320px)'
+        span1.classList.remove('span-1-animado');
+        span2.classList.remove('span-2-animado');
+        span3.classList.remove('span-3-animado');
+    }
+});
+
+
+// MENU MOBILE
+
