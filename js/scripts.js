@@ -67,6 +67,3 @@ iconMenuMobile.addEventListener('click', () => {
     }
 });
 
-
-// MENU MOBILE
-

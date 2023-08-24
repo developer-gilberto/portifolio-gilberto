@@ -24,26 +24,37 @@
     --cor-destaque: #0AFFEB;
     --cor-subtitulo: #778899;
     --cor-secundaria: #1696FF;
-    --cor-background: #050710;
-    --cor-background-2: #0a0e24;
+    /* --cor-background: #050710; */
+    --cor-background: #2b2a33;
+    /* --cor-background-2: #0a0e24; */
+    --cor-background-2: #42414d;
     --cor-preto: #000;
 }
 
 /* CLASSE LIGHT MODE */
 
-.light{
+.light:root{
     --cor-paragrafo: #000;
     /* --cor-destaque: #050710; */
-    --cor-destaque: #0a0e24;
+    --cor-destaque: #0075de;
     --cor-subtitulo: #778899;
     --cor-secundaria: #1696FF;
-    --cor-background: #EDF1F4;
-    --cor-background-2: #d3d3d3;
+    /* --cor-background: #EDF1F4; */
+    --cor-background:#f2edff;
+    --cor-background-2: #f2edff;
     /* --cor-background-2: #0a0e24; */
     --cor-preto: #fff; 
 }
 
 @media screen and (max-width: 980px){
+
+    ::-webkit-scrollbar{
+        background-color: transparent;
+    }
+    
+    ::-webkit-scrollbar-thumb{
+        background-color: transparent;
+    }
 
     header{
         padding: .625rem 1.25rem;
@@ -109,7 +120,7 @@
         user-select: none;
     }
     .span-1-animado{
-        transform: rotate(45deg) translateY(2px);
+        transform: rotate(135deg) translateY(-1px);
     }
 
 
@@ -140,7 +151,7 @@
         user-select: none;
     }
     .span-3-animado{
-        transform: rotate(-45deg) translateY(-2px);
+        transform: rotate(-135deg) translateY(3px);
     }
 
     /* NAV MOBILE */
@@ -148,13 +159,18 @@
     .nav-mobile{
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: stretch;
         align-items: center;
         background-color: var(--cor-background-2);
+        height: calc(100vh - 80px);
+        /* height: 100vh; */
         padding: 1.25rem .625rem;
-        border: .0625rem solid var(--cor-destaque);
-        border-radius: 1.25rem 0 0 1.25rem;
+        border-left: .0625rem solid var(--cor-subtitulo);
+        border-bottom: .0625rem solid var(--cor-subtitulo);
+        border-radius: 0 0 0 1.25rem;
         box-shadow: -7px 10px 10px #00000077;
+        
+        overflow-y: auto;
 
         /* min-width: 100%; */
         max-width: 300px;
@@ -198,6 +214,7 @@
     }
     .sociais .bx{
         color: var(--cor-destaque);
+        margin: .625rem;
         font-size: 1.7rem;
     }
     .container-interruptor-mobile{
@@ -247,8 +264,10 @@
 
     /* UL */
     .nav-mobile ul{
-        margin-top: 1.25rem;
+        margin-top: .625rem;
+        width: 100%;
         /* background-color: #1696FF; */
+        overflow-y: auto;
     }
     .nav-mobile ul li{
         /* border: 1px solid #fff; */
