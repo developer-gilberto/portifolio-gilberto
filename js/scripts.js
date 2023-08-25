@@ -1,69 +1,40 @@
-// TEMA DARK/LIGHT
+// ABRE/FECHA MENU, ANIMA BOTÃO MENU
 
-// DESKTOP
+const btnMenu = document.querySelector('#btn-burguer');
+const menu = document.querySelector('.menu');
+const span1 = document.querySelector('.span-1');
+const span2 = document.querySelector('.span-2');
+const span3 = document.querySelector('.span-3');
 
-let html = document.querySelector('html');
-let checkboxDesktop = document.querySelector('#checkbox-tema-desktop');
-let labelTemaDesktop = document.querySelector('#label-tema-desktop');
-let interruptor = document.querySelector('.interruptor');
+function openCloseMenu(){
+    menu.classList.toggle('anima-menu');
+    span1.classList.toggle('anima-span-1');
+    span2.classList.toggle('anima-span-2');
+    span3.classList.toggle('anima-span-3');
+}
 
-labelTemaDesktop.addEventListener('click', () => {
+btnMenu.addEventListener('click', () => {
 
-    if(checkboxDesktop.checked == true){
-
-        interruptor.style.transform = 'translateX(30px)';
-        html.classList.add('light');
-    } else {
-
-        interruptor.style.transform = 'translateX(0px)';
-        html.classList.remove('light');
-    }
+    openCloseMenu();
 });
 
+// FECHA MENU QUANDO CLICAR EM ITENS DO MENU 
 
-// MOBILE
-let checkboxMobile = document.querySelector('#checkbox-tema-mobile');
-let labelTemaMobile = document.querySelector('.label-tema-mobile');
-let interruptorMobile = document.querySelector('.div-ball-mobile');
+let itensMenu = document.querySelector('.menu ul');
 
-labelTemaMobile.addEventListener('click', () => {
+itensMenu.addEventListener('click', () => {
 
-    if(checkboxMobile.checked == true){
+    openCloseMenu();
+})
 
-        interruptorMobile.style.transform = 'translateX(30px)';
-        html.classList.add('light');
-    } else {
+// DARK MODE
 
-        interruptorMobile.style.transform = 'translateX(0px)';
-        html.classList.remove('light');
-    }
+const btnTema = document.querySelector('.btn-tema');
+const html = document.querySelector('html');
+const ball = document.querySelector('.ball');
+
+btnTema.addEventListener('click', () => {
+
+    ball.classList.toggle('anima-ball');
+    html.classList.toggle('dark');
 });
-
-
-// ÍCONE MENU ANIMADO
-
-let iconMenuMobile = document.querySelector('#checkbox-menu-mobile');
-let menuMobile = document.querySelector('.nav-mobile');
-
-let span1 = document.querySelector('.span-1');
-let span2 = document.querySelector('.span-2');
-let span3 = document.querySelector('.span-3');
-
-
-iconMenuMobile.addEventListener('click', () => {
-
-    if(iconMenuMobile.checked != true){
-
-        menuMobile.style.transform = 'translateX(0)'
-        span1.classList.add('span-1-animado');
-        span2.classList.add('span-2-animado');
-        span3.classList.add('span-3-animado');
-    } else {
-
-        menuMobile.style.transform = 'translateX(320px)'
-        span1.classList.remove('span-1-animado');
-        span2.classList.remove('span-2-animado');
-        span3.classList.remove('span-3-animado');
-    }
-});
-
