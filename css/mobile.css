@@ -30,7 +30,49 @@
     --cor-preto: #000;
 }
 @media screen and (max-width: 980px){
+
     .nav-desktop{
         display: none;
+    }
+
+    /* HOME */
+
+    /* #home{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 0 1.25rem;
+    } */
+    .boas-vindas{
+        font-size: 1rem;
+        margin-top: 71px;
+    }
+    .eu-sou{
+        font-size: 1.5rem;
+    }
+    .gilberto-lopes{
+        font-size: 2rem;
+    }
+    .full-stack{
+        font-size: 1.1rem;
+    }
+    .chaves-full-stack{
+        font-size: 1.1rem;
+    }
+
+    .container-sobre{
+        flex-direction: column;
+    }
+
+    .container-texto-sobremim p{
+        text-align: center;
+        text-indent: none;
+        padding: 1.25rem 0rem;
+    }
+
+    h3{
+        margin: .625rem;
     }
 }
