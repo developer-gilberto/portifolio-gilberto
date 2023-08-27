@@ -63,16 +63,43 @@
     }
 
     .container-sobre{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     .container-texto-sobremim p{
-        text-align: center;
-        text-indent: none;
-        padding: 1.25rem 0rem;
+        margin-right: 0rem;
     }
 
     h3{
         margin: .625rem;
     }
+}
+
+@media screen and (max-width: 650px){
+
+    #skills{
+        padding-top: 71px;
+    }
+
+    .container-skills{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-hard-skills{
+        /* width: 100%; */
+        width: 300px;
+    }
+    .container-soft-skills{
+        width: 100%;
+    }
+
+    .container-hard-skills .bx{
+        font-size: 4rem;
+    }
+
+    .tux{
+        width: 3rem;
+    }
+
 }

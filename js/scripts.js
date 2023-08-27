@@ -1,4 +1,4 @@
-// ABRE/FECHA MENU, ANIMA BOTÃO MENU
+// FUNÇÃO ABRE/FECHA MENU E ANIMA BOTÃO MENU
 
 const btnMenu = document.querySelector('#btn-burguer');
 const menu = document.querySelector('.menu');

@@ -224,11 +224,14 @@ header{
     justify-content: center;
     align-items: center;
     padding: 1.25rem .625rem;
-    position: absolute;
+     position: absolute;
     top: 71px;
     right: -320px;
     min-width: 300px;
     transition: .4s ease-in-out;
+
+    /* max-height: 600px; */
+    /* overflow-y: auto;  */
 }
 .anima-menu{
     /* right: 0; */
@@ -318,6 +321,14 @@ header{
     color: rgb(255, 255, 0);
     font-size: 20px;
 }
+
+.div-ul{
+    margin-top: 1.25rem;
+    min-width: 100%;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
 .menu ul{
     display: flex;
     flex-direction: column;
@@ -325,6 +336,9 @@ header{
     align-items: center;
     min-width: 100%;
     margin-top: 1.625rem;
+
+    /* max-height: 400px; */
+    /* overflow-y: auto; */
 }
 .menu ul li{
     display: flex;
@@ -417,10 +431,10 @@ p{
     font-size: 2rem;
 }
 
-#bg-sobre-mim{
-    background-image: url(../img/hacker.jpeg);
+/* #bg-sobre-mim{
+    background-image: url(../img/gil-transparent-1x1.png);
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: top center;
     background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -428,38 +442,49 @@ p{
     align-items: center;
     min-width: 100%;
     height: 100vh;
-}
+} */
 
 #sobre-mim{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 1.25rem;
+    padding-top: 71px;
+}
+
+#sobre-mim h2{
+    margin: .625rem;
 }
 
 .container-sobre{
-    /* background-color: #778899; */
+    margin-top: 1.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* max-width: 1000px;
-    max-height: 25.5rem; */
+}
+
+.container-texto-img{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .container-img-sobremim{
-    /* background-color: #778899; */
     display: flex;
     justify-content: center;
     align-items: center;
+
     width: 50%;
 }
 
 .container-img-sobremim img{
-    /* max-width: 25rem; */
+    /* filter: drop-shadow(0px 0px 5px var(--destaque)); */
     max-width: 100%;
-    border: 1px solid var(--destaque);
-    border-radius: 50%;
+    /* border: 1px solid var(--destaque); */
+    /* border-radius: 50%; */
+
     /* ANIMAR BORDA */
 }
 
@@ -467,19 +492,108 @@ p{
     width: 100%;
 }
 
+.container-texto-sobremim h3{
+    margin: 2rem;
+}
+
 .container-texto-sobremim p{
+    font-size: .8rem;
     text-align: justify;
     text-indent: 30px;
-    padding: 1.25rem;
+    /* padding: 1.25rem; */
+    margin-right: 2rem;
 }
+
+/* SECTION SKILLS */
 
 #skills{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 1.25rem;
 }
+
+.container-skills{
+    margin-top: 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    /* max-width: 800px; */
+}
+
+.container-hard-skills{
+    border-radius: 1.25rem;
+    margin: .625rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#skills h3{
+    margin: 1.625rem;
+}
+
+.container-icons-skills{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container-hard-skills .bx{
+    text-shadow: 1px 1px 0px #000;
+    font-size: 5rem;
+    margin: .625rem;
+    transition: .3s;
+}
+
+#html{
+    color: rgb(255, 94, 0);
+}
+#css{
+    color: rgb(59, 45, 250);
+}
+#js{
+    color: rgb(235, 250, 19);
+}
+#node{
+    color: rgb(19, 153, 5);
+}
+#git{
+    color: #E84D31;
+}
+
+.tux{
+    background-color: #f2edff;
+    border-radius: 7px;
+    width: 4rem;
+}
+
+.container-soft-skills{
+    border-radius: 1.25rem;
+    margin: .625rem;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-soft-skills li::before{
+    content: '+ ';
+    color: var(--secundaria);
+}
+
+.container-soft-skills li{
+    color: var(--p);
+}
+
 #projetos{
     display: flex;
     flex-direction: column;
