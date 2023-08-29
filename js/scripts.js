@@ -38,3 +38,10 @@ btnTema.addEventListener('click', () => {
     ball.classList.toggle('anima-ball');
     html.classList.toggle('dark');
 });
+
+// SLIDE PROJETOS
+
+const arrowLeft = document.querySelector('#seta-esquerda');
+const arrowRight = document.querySelector('#seta-right');
+const cardsProjetos = document.querySelector('.card-projetos');
+
