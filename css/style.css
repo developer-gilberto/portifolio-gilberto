@@ -572,6 +572,7 @@ p{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    gap: .625rem;
 }
 
 .container-hard-skills .bx{
@@ -602,9 +603,7 @@ p{
 }
 
 .tux{
-    background-color: #f2edff;
-    border-radius: 7px;
-    width: 4.5rem;
+    width: 5.5rem;
 }
 
 .container-soft-skills{
