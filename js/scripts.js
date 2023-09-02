@@ -42,6 +42,26 @@ btnTema.addEventListener('click', () => {
 // SLIDE PROJETOS
 
 const arrowLeft = document.querySelector('#seta-esquerda');
-const arrowRight = document.querySelector('#seta-right');
-const cardsProjetos = document.querySelector('.card-projetos');
+const arrowRight = document.querySelector('#seta-direita');
+const cardsProjetos = document.querySelectorAll('.card-projetos');
+const containerProjetos = document.querySelector('.container-projetos');
+
+// for(let i = 0; i <= i.length; i++){
+
+//     arrowRight.addEventListener('click', function mover() {
+
+//             containerProjetos.style.transform = 'translateX(-370px)'
+//         })
+
+//         mover()
+// }
+
+arrowRight.addEventListener('click', () => {
+
+    containerProjetos.style.transform = 'translateX(-370px)'
+})
+arrowLeft.addEventListener('click', () => {
+
+    containerProjetos.style.transform = 'translateX(370px)'
+})
 
