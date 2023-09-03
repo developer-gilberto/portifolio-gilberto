@@ -29,7 +29,7 @@ itensMenu.addEventListener('click', () => {
 
 // DARK MODE
 
-const btnTema = document.querySelector('.btn-tema');
+const btnTema = document.querySelector('#btn-tema');
 const html = document.querySelector('html');
 const ball = document.querySelector('.ball');
 
@@ -38,30 +38,4 @@ btnTema.addEventListener('click', () => {
     ball.classList.toggle('anima-ball');
     html.classList.toggle('dark');
 });
-
-// SLIDE PROJETOS
-
-const arrowLeft = document.querySelector('#seta-esquerda');
-const arrowRight = document.querySelector('#seta-direita');
-const cardsProjetos = document.querySelectorAll('.card-projetos');
-const containerProjetos = document.querySelector('.container-projetos');
-
-// for(let i = 0; i <= i.length; i++){
-
-//     arrowRight.addEventListener('click', function mover() {
-
-//             containerProjetos.style.transform = 'translateX(-370px)'
-//         })
-
-//         mover()
-// }
-
-arrowRight.addEventListener('click', () => {
-
-    containerProjetos.style.transform = 'translateX(-370px)'
-})
-arrowLeft.addEventListener('click', () => {
-
-    containerProjetos.style.transform = 'translateX(370px)'
-})
 
