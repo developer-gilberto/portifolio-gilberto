@@ -146,7 +146,7 @@ header{
 
 .nav-desktop ul li a{
     color: var(--subtitulo);
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: bolder;
     display: flex;
     flex-direction: column;
@@ -641,7 +641,7 @@ p{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding-top: 71px;
+    padding: 71px 0;
 }
 
 #projetos h2{
@@ -722,7 +722,7 @@ iframe{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid var(--secundaria);
+    /* border: .5px solid var(--subtitulo); */
     box-shadow: 5px 5px 5px #00000056;
     color: var(--subtitulo);
     width: calc(100% - 50px);
@@ -732,11 +732,13 @@ iframe{
     text-align: center;
     font-size: 1em;
     margin: 10px;
+    transition: 0.3s ease-in-out;
 }
 .card-projetos a:hover{
-    background-color: var(--bg-hover-itens-menu);
-    color: var(--destaque);
-    transition: 0.3s ease;
+    border-radius: 30px;
+    background-color: var(--destaque);
+    color: var(--bg-second);
+    font-weight: bold;
 }
 
 .card-projetos a .bx-link-external{
@@ -754,21 +756,160 @@ iframe{
 /* SECTION CONTATO */
 
 #contato{
+    background-image: url(../img/contato.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 71px 1.25rem;
+}
+
+#contato form h2{
+    color: var(--destaque);
+    /* text-shadow: 1px 1px 0px #000; */
+}
+
+#contato form{
+    backdrop-filter: blur(50px);
+    outline: none;
+    border: 1px solid var(--secundaria);
+    box-shadow: 8px 10px 7px #00000063;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 1.25rem;
+    margin: 2rem 0;
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+.container-label{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 1.25rem;
+}
+
+#contato form .material-symbols-outlined{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--destaque);
+    padding: .3125rem;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+#contato form .input-form{
+    color: rgb(73, 73, 73);
+    width: 100%;
+    outline: none;
+    padding: .3125rem;
+    border: none;
+    transition: .3s ease-in-out;
+    font-weight: 500;
+    border: 2px solid transparent;
+}
+
+#contato form .input-form:focus{
+    border-radius: 1.25rem;
+    border: 2px solid var(--secundaria);
+    background-color: lightgray;
+}
+
+.container-textarea{
+    /* display: flex;
+    justify-content: center;
+    align-items: flex-start; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+#contato form textarea{
+    color: rgb(73, 73, 73);
+    font-weight: 500;
+    resize: none;
+    max-width: 100%;
+    outline: none;
+    padding: .3125rem;
+    border: none;
+    border: 2px solid transparent;
+    transition: .4s ease-in-out;
+}
+
+#contato form textarea:focus{
+    border-radius: 1.25rem;
+    border: 2px solid var(--secundaria);
+    background-color: lightgray;
+}
+
+#contato .btn-form{
+    width: 100%;
+    padding: .3125rem;
+    margin-top: 1.25rem;
+    border: 1px solid var(--secundaria);
+    color: var(--secundaria);
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    border-radius: 1.25rem;
+    font-weight: bold;
+}
+
+#contato .btn-form:hover{
+    background-color: var(--destaque);
+    color: var(--bg-second);
 }
 
 /* FOOTER */
 
 footer{
-    border-top: 1px solid rgba(128, 128, 128, 0.355);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 1.25rem;
+    background-color: var(--bg-primary);
+    color: var(--subtitulo);
+    text-align: center;
+    padding: 0.625rem; 
 }
 
+/* LOGOMARCA DO FOOTER SEM ANIMAÇÃO */
+
+#logo-footer{
+    font-size: .9rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+#logo-footer .developer{ 
+    color: var(--subtitulo);
+    font-weight: 500;
+    font-style: italic;
+}
+#logo-footer .gilberto{ 
+    color: var(--destaque);
+    font-weight: bold;
+    font-style: italic;
+}
+#logo-footer .maior-menor{
+    -webkit-text-stroke: 1px var(--destaque);
+    color: transparent;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+footer p{
+    font-size: 12px;
+}

@@ -79,9 +79,9 @@
                 <p class="adress-email">developer.gilberto@gmail.com</p>
             </div>
             <div class="container-sociais">
-                <i class='bx bxl-github'></i>
-                <i class='bx bxl-linkedin-square' ></i>
-                <i class='bx bxl-instagram' ></i>
+                <a href="https://github.com/developer-gilberto" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i></a>
+                <a href="#"><i class='bx bxl-linkedin-square' ></i></a>
+                <a href="https://www.instagram.com/developer.gilberto/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-instagram' ></i></a>
             </div>
             <button id="btn-tema">
                 <label for="btn-tema">
@@ -252,20 +252,45 @@
 
         <!-- SECTION CONTATO -->
         <section id="contato">
-            <h2>CONTATO</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic rerum provident nemo similique ipsa unde incidunt! Ipsum amet ratione cum! Explicabo ipsa unde repudiandae. Illum aut tempora officiis fuga error?
-            </p>
+            <form action="https://formsubmit.co/developer.gilberto@gmail.com" method="POST">
+                <h2>CONTATO PROFISSIONAL</h2>
+                    <div class="container-label">
+                        <label for="input-name">
+                            <span class="material-symbols-outlined">person</span>
+                        </label>
+                        <input id="input-name" class="input-form" type="text" name="name" placeholder="Digite seu nome" required>
+                    </div>
+                    <div class="container-label">
+                        <label for="input-email">
+                            <span class="material-symbols-outlined">mail</span>
+                        </label>
+                        <input id="input-email" class="input-form" type="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="container-textarea">
+                        <label for="textarea">
+                            <span class="material-symbols-outlined">comment</span>
+                        </label>
+                        <textarea id="textarea" name="textarea" cols="30" rows="5" spellcheck="false" placeholder="Mensagem..."></textarea>
+                    </div>
+                    <input class="btn-form" type="submit" value="Enviar">
+                    <input class="btn-form" type="reset" value="Limpar">
+           </form>
         </section>
 
     </main>
 
     <!-- FOOTER -->
     <footer>
-        <h2>RODAPÉ</h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid aperiam at tempore excepturi incidunt ex adipisci, quas deleniti blanditiis, minus nulla. Pariatur, maxime laboriosam temporibus aut harum ab enim eius?
+        <p id="logo-footer">
+            <span class="maior-menor">&lt;</span>
+            <span class="developer">Developer</span>
+            <span class="gilberto">Gilberto</span>
+            <span class="maior-menor">&gt;</span>&reg;
         </p>
+
+        <p>&copy; Copy Right</p>
+        <p>All rights reserved 2023</p>
+        <p>Site criado e desenvolvido por <strong>Gilberto Lopes.</strong></p>
     </footer>
 
     <!-- JavaScript -->
