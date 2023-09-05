@@ -1,28 +1,30 @@
-// FUNÇÃO ABRE/FECHA MENU E ANIMA BOTÃO MENU
+// FUNÇÃO PARA ABRIR/FECHAR MENU MOBILE E ANIMAR BOTÃO HAMBURGUER
 
-const btnMenu = document.querySelector('#btn-burguer');
-const menu = document.querySelector('.menu');
-const span1 = document.querySelector('.span-1');
-const span2 = document.querySelector('.span-2');
-const span3 = document.querySelector('.span-3');
+const btnMenuBurguer = document.querySelector('#btn-burguer');
+const menuMobile = document.querySelector('.menu');
+const barra1BtnMenuBurguer = document.querySelector('.span-1');
+const barra2BtnMenuBurguer = document.querySelector('.span-2');
+const barra3BtnMenuBurguer = document.querySelector('.span-3');
 
 function openCloseMenu(){
-    menu.classList.toggle('anima-menu');
-    span1.classList.toggle('anima-span-1');
-    span2.classList.toggle('anima-span-2');
-    span3.classList.toggle('anima-span-3');
+    menuMobile.classList.toggle('anima-menu');
+    barra1BtnMenuBurguer.classList.toggle('anima-span-1');
+    barra2BtnMenuBurguer.classList.toggle('anima-span-2');
+    barra3BtnMenuBurguer.classList.toggle('anima-span-3');
 }
 
-btnMenu.addEventListener('click', () => {
+// ABRE/FECHA MENU MOBILE
+
+btnMenuBurguer.addEventListener('click', () => {
 
     openCloseMenu();
 });
 
-// FECHA MENU QUANDO CLICAR EM ITENS DO MENU 
+// FECHA MENU MOBILE QUANDO CLICAR EM ITENS DO MENU
 
-let itensMenu = document.querySelector('.menu ul');
+let itensMenuMobile = document.querySelector('.menu ul');
 
-itensMenu.addEventListener('click', () => {
+itensMenuMobile.addEventListener('click', () => {
 
     openCloseMenu();
 })
@@ -31,11 +33,23 @@ itensMenu.addEventListener('click', () => {
 
 const btnTema = document.querySelector('#btn-tema');
 const html = document.querySelector('html');
-const ball = document.querySelector('.ball');
+const interruptorBtnTema = document.querySelector('.ball');
 
 btnTema.addEventListener('click', () => {
 
-    ball.classList.toggle('anima-ball');
+    interruptorBtnTema.classList.toggle('anima-ball');
     html.classList.toggle('dark');
 });
 
+// ALERT "EM BREVE"
+
+const linkLinkedin = document.querySelector('#linkedin');
+const linkYoutube = document.querySelector('#yt');
+
+linkLinkedin.addEventListener('click', () => {
+    alert('EM BREVE!!!');
+});
+
+linkYoutube.addEventListener('click', () => {
+    alert('EM BREVE!!!');
+});
