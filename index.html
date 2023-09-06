@@ -79,10 +79,18 @@
                 <p class="adress-email">developer.gilberto@gmail.com</p>
             </div>
             <div class="container-sociais">
-                <a href="https://github.com/developer-gilberto" target="_blank" rel="noopener noreferrer"><i class='bx bxl-github'></i></a>
-                <a href="https://www.instagram.com/developer.gilberto/" target="_blank" rel="noopener noreferrer"><i class='bx bxl-instagram' ></i></a>
-                <a id="linkedin" href="#"><i class='bx bxl-linkedin-square' ></i></a>
-                <a id="yt" href="#"><i class='bx bxl-youtube'></i></a>
+                <a href="https://github.com/developer-gilberto" target="_blank" rel="noopener noreferrer">
+                    <i class='bx bxl-github'></i>
+                </a>
+                <a href="https://www.instagram.com/developer.gilberto/" target="_blank" rel="noopener noreferrer">
+                    <i class='bx bxl-instagram' ></i>
+                </a>
+                <a id="linkedin" href="#">
+                    <i class='bx bxl-linkedin-square' ></i>
+                </a>
+                <a id="yt" href="#">
+                    <i class='bx bxl-youtube'></i>
+                </a>
             </div>
             <button id="btn-tema">
                 <label for="btn-tema">
@@ -196,7 +204,7 @@
         <!-- SECTION PROJETOS -->
         <section id="projetos">
             <h2>PROJETOS</h2>
-            <p>Aqui você encontra alguns dos projetos que fiz. Você pode navegar por cada projeto sem necessariamente abri-lo. Basta rolar a tela dos smartphones abaixo ou se preferir, clique em "visitar projeto" para acessar o site do projeto. Caso queira analizar o código e saber como o projeto foi feito, clique em "Código fonte".</p>
+            <p>Aqui você encontra alguns dos projetos que fiz com o objetivo de praticar os conhecimentos que estou adquirindo. Clique em "Visitar projeto" para acessar o deploy do projeto ou, caso queira analizar o código e saber como o projeto foi feito, clique em "Código fonte". Observação: Todos os projetos são responsivos.</p>
             <div class="container-projetos">
                 <div class="card-projetos">
                     <h3>Portifólio Gilberto</h3>
@@ -206,7 +214,8 @@
                         <i class='bx bxl-javascript'></i>
                     </div>
                     <div class="iphone">
-                        <iframe src="https://developer-gilberto.github.io/portifolio-gilberto/" frameborder="0"></iframe>
+                        <!-- <iframe src="https://developer-gilberto.github.io/portifolio-gilberto/" frameborder="0"></iframe> -->
+                        <img src="img/portifolio-gilberto.png" alt="Portifólio Gilberto">
                     </div>
                     <a href="https://developer-gilberto.github.io/portifolio-gilberto/" target="_blank" rel="noopener noreferrer"><i class='bx bx-link-external'></i>Visitar projeto</a>
                     <a href="https://github.com/developer-gilberto/portifolio-gilberto/" target="_blank" rel="noopener noreferrer"><i class='bx bx-code-alt' ></i>Código fonte</a>
@@ -218,7 +227,8 @@
                         <i class='bx blue3 bxl-css3' ></i>
                     </div>
                     <div class="iphone">
-                        <iframe src="https://developer-gilberto.github.io/project-android/" frameborder="0"></iframe>
+                        <!-- <iframe src="https://developer-gilberto.github.io/project-android/" frameborder="0"></iframe> -->
+                        <img src="img/mascote-android.png" alt="Projeto Mascote Android">
                     </div>
                     <a href="https://developer-gilberto.github.io/project-android/" target="_blank" rel="noopener noreferrer"><i class='bx bx-link-external'></i>Visitar projeto</a>
                     <a href="https://github.com/developer-gilberto/project-android" target="_blank" rel="noopener noreferrer"><i class='bx bx-code-alt' ></i>Código fonte</a>
@@ -230,7 +240,8 @@
                         <i class='bx blue3 bxl-css3' ></i>
                     </div>
                     <div class="iphone">
-                        <iframe src="https://developer-gilberto.github.io/projeto-cordel/" frameborder="0"></iframe>
+                        <!-- <iframe src="https://developer-gilberto.github.io/projeto-cordel/" frameborder="0"></iframe> -->
+                        <img src="img/cordel-moderno.png" alt="Projeto Cordel Moderno">
                     </div>
                     <a href="https://developer-gilberto.github.io/projeto-cordel/" target="_blank" rel="noopener noreferrer"><i class='bx bx-link-external'></i>Visitar projeto</a>
                     <a href="https://github.com/developer-gilberto/projeto-cordel/" target="_blank" rel="noopener noreferrer"><i class='bx bx-code-alt' ></i>Código fonte</a>
@@ -242,7 +253,8 @@
                         <i class='bx blue3 bxl-css3' ></i>
                     </div>
                     <div class="iphone">
-                        <iframe src="https://developer-gilberto.github.io/portfolio/" frameborder="0"></iframe>
+                        <!-- <iframe src="https://developer-gilberto.github.io/portfolio/" frameborder="0"></iframe> -->
+                        <img src="img/portifolio-teste.png" alt="Projeto Portifólio teste">
                     </div>
                     <a href="https://developer-gilberto.github.io/portfolio/" target="_blank" rel="noopener noreferrer"><i class='bx bx-link-external'></i>Visitar projeto</a>
                     <a href="https://github.com/developer-gilberto/portfolio/" target="_blank" rel="noopener noreferrer"><i class='bx bx-code-alt' ></i>Código fonte</a>
@@ -258,19 +270,19 @@
                         <label for="input-name">
                             <span class="material-symbols-outlined">person</span>
                         </label>
-                        <input id="input-name" class="input-form" type="text" name="name" placeholder="Digite seu nome" required>
+                        <input id="input-name" class="input-form" type="text" name="name" placeholder="Digite seu nome" spellcheck="false" autocomplete="off" required>
                     </div>
                     <div class="container-label">
                         <label for="input-email">
                             <span class="material-symbols-outlined">mail</span>
                         </label>
-                        <input id="input-email" class="input-form" type="email" name="email" placeholder="Digite seu e-mail" required>
+                        <input id="input-email" class="input-form" type="email" name="email" placeholder="Digite seu e-mail" spellcheck="false" autocomplete="off" required>
                     </div>
                     <div class="container-textarea">
                         <label for="textarea">
                             <span class="material-symbols-outlined">comment</span>
                         </label>
-                        <textarea id="textarea" name="textarea" cols="30" rows="5" spellcheck="false" placeholder="Mensagem..."></textarea>
+                        <textarea id="textarea" name="textarea" cols="30" rows="5" spellcheck="false" autocomplete="off" placeholder="Mensagem..."></textarea>
                     </div>
                     <input class="btn-form" type="submit" value="Enviar">
                     <input class="btn-form" type="reset" value="Limpar">

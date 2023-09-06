@@ -166,7 +166,7 @@ header{
     align-items: center;
 }
 
-/* BUTTON MENU */
+/* BUTTON MENU HAMBURGUER*/
 
 #btn-burguer{
     background-color: var(--bg-primary);
@@ -301,7 +301,7 @@ header{
 }
 
 .container-sociais .bx{
-    color: var(--secundaria);
+    color: var(--subtitulo);
     font-size: 2rem;
     margin: 0 .625rem;
     transition: .3s;
@@ -346,6 +346,10 @@ header{
     left: 0;
     transform: scale(1.1);
     transition: .3s ease-in-out;
+}
+
+.ball:hover{
+    background-color: var(--destaque);
 }
 
 .anima-ball{
@@ -489,6 +493,8 @@ p{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 1.25rem;
     padding-top: 71px;
 }
@@ -502,12 +508,15 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 3rem;
 }
 
-.container-texto-img{
+.container-texto-sobremim{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    max-width: 700px;
 }
 
 .container-img-sobremim{
@@ -519,11 +528,23 @@ p{
 
 .container-img-sobremim img{
     /* filter: drop-shadow(0px 0px 5px var(--destaque)); */
+    background-image: linear-gradient(to top, var(--black-white), var(--secundaria));
+    box-shadow: 5px 7px 10px #000000ab;
     max-width: 100%;
-    /* border: 1px solid var(--destaque); */
-    /* border-radius: 50%; */
+    border:1px solid var(--secundaria);
+    border-radius: 50%;
+    animation: bordaAnimada 1.5s infinite alternate;
 
     /* ANIMAR BORDA */
+}
+
+@keyframes bordaAnimada{
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-20px);
+    }
 }
 
 .container-texto-sobremim{
@@ -535,7 +556,7 @@ p{
 }
 
 .container-texto-sobremim p{
-    font-size: .8rem;
+    font-size: .9rem;
     text-align: justify;
     text-indent: 30px;
     margin-right: 2rem;
@@ -710,7 +731,7 @@ p{
     align-items: center;
 }
 
-iframe{
+.iphone img{
     display: flex;
     justify-content: center;
     align-items: center;
