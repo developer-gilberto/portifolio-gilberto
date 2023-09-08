@@ -65,3 +65,16 @@ linkLinkedin.addEventListener('click', () => {
 linkYoutube.addEventListener('click', () => {
     alert('EM BREVE!!!');
 });
+
+// BOTÃO "IR PARA O TOPO"
+
+const btnIrParaTopo = document.querySelector('#btn-topo');
+
+window.addEventListener('scroll', () => {
+
+    if(scrollY >= 900) {
+        btnIrParaTopo.style.display = 'block';
+    } else{
+        btnIrParaTopo.style.display = 'none';
+    }
+});

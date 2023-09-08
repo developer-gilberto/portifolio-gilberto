@@ -692,7 +692,7 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 1.25rem;
+    margin-top: 5rem;
 }
 
 .card-projetos .bxl-html5{
@@ -901,7 +901,7 @@ footer{
     background-color: var(--bg-primary);
     color: var(--subtitulo);
     text-align: center;
-    padding: 0.625rem; 
+    padding: 0.625rem;
 }
 
 /* LOGOMARCA DO FOOTER SEM ANIMAÇÃO */
@@ -933,4 +933,21 @@ footer{
 
 footer p{
     font-size: 12px;
+}
+
+/* BOTÃO "IR PARA O TOPO" */
+
+footer #btn-topo{
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 40px;
+    color: var(--destaque);
+    transition: .3s ease-in-out;
+    z-index: 2;
+}
+
+footer #btn-topo:hover{
+    color: var(--secundaria);
 }
