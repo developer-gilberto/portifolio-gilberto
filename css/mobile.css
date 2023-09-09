@@ -53,7 +53,7 @@
         font-size: 1.5rem;
     }
     .gilberto-lopes{
-        font-size: 2rem;
+        font-size: 4rem;
     }
     .full-stack{
         font-size: 1.1rem;
@@ -76,6 +76,10 @@
 }
 
 @media screen and (max-width: 650px){
+
+    .gilberto-lopes{
+        font-size: 2rem;
+    }
 
     #skills{
         padding-top: 71px;
@@ -101,6 +105,10 @@
 
     .tux{
         width: 3.5rem;
+    }
+
+    footer #btn-topo{
+        font-size: 35px;
     }
 
 }

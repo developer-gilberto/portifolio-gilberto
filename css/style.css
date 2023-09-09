@@ -21,6 +21,7 @@
     --bg-second: #f2edff;
     --black-white: #fff; 
     --bg-hover-itens-menu: #d3d3d38a;
+    --destaque2: #0AFFEB;
 }
 
 /* CLASS DARK MODE */
@@ -28,13 +29,16 @@
 .dark:root{
     --p: #fff;
     /* --destaque: #0AFFEB; */
-    --destaque: #0075de;
+    /* --destaque: #0075de; */
+    --destaque: #004077;
     --subtitulo: #778899;
-    --secundaria: #1696FF;
+    /* --secundaria: #1696FF; */
+    --secundaria: #0075de;
     --bg-primary: #202124;
     --bg-second: #2b2a33;
     --black-white: #000;
     --bg-hover-itens-menu: #272727;
+    --destaque2: #0AFFEB;
 }
 
 /* HTML / BODY */
@@ -58,6 +62,25 @@ html, body{
     width: 0.3125rem;
     background-color: var(--destaque);
     border-radius: 0.625rem;
+}
+
+/* OVERLAY */
+
+.overlay{
+    background-color: #000000a3;
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: none;
+    transition: 1s ease-in-out;
+}
+
+.overlay.open-overlay{
+    display: flex;
 }
 
 /* HEADER */
@@ -453,9 +476,27 @@ p{
     color: var(--destaque);
     font-size: 5rem;
     font-weight: 900;
-    text-shadow: 1px 1px 0px #000;
+    /* text-shadow: 1px 1px 0px #000; */
     text-align: center;
     margin-top: 2rem;
+
+    background: linear-gradient(45deg, var(--destaque2), #0000ff, var(--secundaria), var(--destaque), var(--destaque2));
+    background-size: 400% 100%;
+    animation: degrade 10s linear infinite alternate;
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes degrade{
+    0%{
+        background-position-x: 0%;
+    }
+
+    100%{
+        background-position-x: 400%;
+    }
 }
 
 .full-stack{
@@ -758,7 +799,7 @@ p{
 .card-projetos a:hover{
     border-radius: 30px;
     background-color: var(--destaque);
-    color: var(--bg-second);
+    color: var(--black-white);
     font-weight: bold;
 }
 
@@ -846,9 +887,6 @@ p{
 }
 
 .container-textarea{
-    /* display: flex;
-    justify-content: center;
-    align-items: flex-start; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -888,7 +926,7 @@ p{
 
 #contato .btn-form:hover{
     background-color: var(--destaque);
-    color: var(--bg-second);
+    color: var(--black-white);
 }
 
 /* FOOTER */
@@ -942,12 +980,22 @@ footer #btn-topo{
     position: fixed;
     bottom: 20px;
     right: 20px;
-    font-size: 40px;
-    color: var(--destaque);
+    font-size: 50px;
+    color: var(--secundaria);
     transition: .3s ease-in-out;
     z-index: 2;
+    animation: anima-btn-topo 2s infinite alternate-reverse;
+}
+
+@keyframes anima-btn-topo{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
 }
 
 footer #btn-topo:hover{
-    color: var(--secundaria);
+    color: var(--destaque);
 }

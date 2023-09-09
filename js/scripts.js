@@ -4,13 +4,16 @@ const menuMobile = document.querySelector('.menu');
 const firstBarBtnMenuBurguer = document.querySelector('.span-1');
 const secondBarBtnMenuBurguer = document.querySelector('.span-2');
 const thirdBarBtnMenuBurguer = document.querySelector('.span-3');
+const overlay = document.querySelector('.overlay');
 
 function openCloseMenu(){
+
     menuMobile.classList.toggle('anima-menu');
     firstBarBtnMenuBurguer.classList.toggle('anima-span-1');
     secondBarBtnMenuBurguer.classList.toggle('anima-span-2');
     thirdBarBtnMenuBurguer.classList.toggle('anima-span-3');
-}
+    overlay.classList.toggle('open-overlay');
+};
 
 // ABRE/FECHA MENU MOBILE
 
@@ -21,21 +24,26 @@ btnMenuBurguer.addEventListener('click', () => {
     openCloseMenu();
 });
 
+overlay.addEventListener('click', () => {
+
+    openCloseMenu();
+});
+
 // FECHA MENU MOBILE QUANDO CLICAR EM ITENS DO MENU
 
 let redesSociaisMenuMobile = document.querySelectorAll('.container-sociais .bx');
 let itensMenuMobile = document.querySelectorAll('.itens-menu-mobile');
 
-redesSociaisMenuMobile.forEach(sociais => {
-    sociais.addEventListener('click', () => {
+itensMenuMobile.forEach(item => {
+    
+    item.addEventListener('click', () => {
         
         openCloseMenu();
     });
 });
+redesSociaisMenuMobile.forEach(sociais => {
 
-itensMenuMobile.forEach(item => {
-    
-    item.addEventListener('click', () => {
+    sociais.addEventListener('click', () => {
         
         openCloseMenu();
     });
@@ -53,7 +61,7 @@ btnTema.addEventListener('click', () => {
     html.classList.toggle('dark');
 });
 
-// ALERT "EM BREVE"
+// NOTIFICAÇÃO PARA YOUTUBE E LINKEDIN
 
 const linkLinkedin = document.querySelector('#linkedin');
 const linkYoutube = document.querySelector('#yt');
