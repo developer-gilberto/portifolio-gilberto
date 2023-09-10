@@ -66,6 +66,10 @@
         flex-direction: column-reverse;
     }
 
+    .container-texto-sobremim{
+        max-width: 700px;
+    }
+
     .container-texto-sobremim p{
         margin-right: 0rem;
     }
@@ -79,6 +83,10 @@
 
     .gilberto-lopes{
         font-size: 2rem;
+    }
+
+    .img-dev-home{
+        max-width: 90px;
     }
 
     #skills{

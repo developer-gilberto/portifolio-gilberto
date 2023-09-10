@@ -15,30 +15,29 @@
 :root{
     --P: #000;
     --destaque: #0075de;
+    --destaque2: #0AFFEB;
+    --destaque3: #004077;
     --subtitulo: #778899;
     --secundaria: #1696FF;
     --bg-primary:#f2edff;
     --bg-second: #f2edff;
     --black-white: #fff; 
     --bg-hover-itens-menu: #d3d3d38a;
-    --destaque2: #0AFFEB;
 }
 
 /* CLASS DARK MODE */
 
 .dark:root{
     --p: #fff;
-    /* --destaque: #0AFFEB; */
-    /* --destaque: #0075de; */
-    --destaque: #004077;
+    --destaque: #0075de;
+    --destaque2: #0AFFEB;
+    --destaque3: #004077;
     --subtitulo: #778899;
-    /* --secundaria: #1696FF; */
-    --secundaria: #0075de;
+    --secundaria: #1696FF;
     --bg-primary: #202124;
     --bg-second: #2b2a33;
     --black-white: #000;
     --bg-hover-itens-menu: #272727;
-    --destaque2: #0AFFEB;
 }
 
 /* HTML / BODY */
@@ -117,7 +116,6 @@ header{
 .logo-animado:hover{
     color: var(--destaque);
     transition: 0.3s ease-in-out;
-    /* text-shadow: 2px 2px 0px black; */
 }
 
 .developer{ 
@@ -273,14 +271,11 @@ header{
     justify-content: center;
     align-items: center;
     padding: 1.25rem .625rem;
-
     position: absolute;
-
     top: 70px;
     right: -320px;
     min-width: 300px;
     transition: .4s ease-in-out;
-
     z-index: 9999;
 }
 
@@ -359,7 +354,7 @@ header{
 }
 
 .ball{
-    background-color: var(--secundaria);
+    background-color: var(--destaque);
     box-shadow: 1px 1px 5px #000000c5;
     border: 1px solid var(--subtitulo);
     width: 25px;
@@ -372,7 +367,7 @@ header{
 }
 
 .ball:hover{
-    background-color: var(--destaque);
+    background-color: var(--secundaria);
 }
 
 .anima-ball{
@@ -427,7 +422,6 @@ header{
 .itens-menu-mobile:hover{
     color: var(--destaque);
     background-color: var(--bg-hover-itens-menu);
-    /* text-shadow: 1px 1px 0px #000; */
 }
 
 /* SUBTÍTULOS E PARÁGRAFOS*/
@@ -476,7 +470,6 @@ p{
     color: var(--destaque);
     font-size: 5rem;
     font-weight: 900;
-    /* text-shadow: 1px 1px 0px #000; */
     text-align: center;
     margin-top: 2rem;
 
@@ -508,7 +501,7 @@ p{
 }
 
 .chaves-full-stack{
-    color: var(--secundaria);
+    color: var(--destaque);
     font-size: 1.8rem;
     font-weight: 500;
     font-style: normal;
@@ -524,6 +517,20 @@ p{
 .container-tecnologias .bx{
     color: var(--secundaria);
     font-size: 2rem;
+}
+
+.img-dev-home{
+    max-width: 120px;
+    animation: animaDev .7s linear infinite alternate-reverse;
+}
+
+@keyframes animaDev{
+    0%{
+        filter: drop-shadow(0px 0px 2px var(--destaque));
+    }
+    100%{
+        filter: drop-shadow(0px 0px 10px var(--destaque));
+    }
 }
 
 /* SECTION SOBRE MIM */
@@ -557,7 +564,33 @@ p{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    max-width: 700px;
+    width: 100%;
+}
+
+.container-texto-sobremim h3{
+    margin: 2rem;
+}
+
+.container-img-developer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-dev-sobremim{
+    max-width: 50px;
+    filter: drop-shadow(0px 0px 1px var(--destaque));
+}
+
+.container-img-developer p{
+    text-indent: 0px !important;
+}
+
+.container-texto-sobremim p{
+    font-size: .9rem;
+    text-align: justify;
+    text-indent: 30px;
+    margin-right: 2rem;
 }
 
 .container-img-sobremim{
@@ -567,40 +600,25 @@ p{
     width: 50%;
 }
 
-.container-img-sobremim img{
+.img-gil-sobremim{
     /* filter: drop-shadow(0px 0px 5px var(--destaque)); */
     background-image: linear-gradient(to top, var(--black-white), var(--secundaria));
     box-shadow: 5px 7px 10px #000000ab;
     max-width: 100%;
     border:1px solid var(--secundaria);
     border-radius: 50%;
-    animation: bordaAnimada 1.5s infinite alternate;
+    animation: animadaImg 1.5s linear infinite alternate;
 
     /* ANIMAR BORDA */
 }
 
-@keyframes bordaAnimada{
+@keyframes animadaImg{
     0%{
         transform: translateY(0px);
     }
     100%{
         transform: translateY(-20px);
     }
-}
-
-.container-texto-sobremim{
-    width: 100%;
-}
-
-.container-texto-sobremim h3{
-    margin: 2rem;
-}
-
-.container-texto-sobremim p{
-    font-size: .9rem;
-    text-align: justify;
-    text-indent: 30px;
-    margin-right: 2rem;
 }
 
 /* SECTION SKILLS */
@@ -739,18 +757,15 @@ p{
 .card-projetos .bxl-html5{
     color: rgba(222, 67, 24, 0.911);
     font-size: 3em;
-    /* margin: 1.25rem; */
 }
 .card-projetos .bxl-css3{
     color: rgb(53, 53, 222);
     font-size: 3em;
-    /* margin: 1.25rem; */
 } 
 .card-projetos .bxl-javascript{
     color: rgb(232, 244, 71);
     text-shadow: 1px 1px 3px black;
     font-size: 3em;
-    /* margin: 1.25rem; */
 } 
 
 /* IPHONE */
@@ -761,12 +776,10 @@ p{
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-
     width: 320px;
     height: 660px;
     padding: 88px 15px;
     margin: 1.25rem;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -784,7 +797,6 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: .5px solid var(--subtitulo); */
     box-shadow: 5px 5px 5px #00000056;
     color: var(--subtitulo);
     width: calc(100% - 50px);
@@ -832,7 +844,6 @@ p{
 
 #contato form h2{
     color: var(--destaque);
-    /* text-shadow: 1px 1px 0px #000; */
 }
 
 #contato form{
@@ -942,35 +953,19 @@ footer{
     padding: 0.625rem;
 }
 
-/* LOGOMARCA DO FOOTER SEM ANIMAÇÃO */
-
-#logo-footer{
-    font-size: .9rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-}
-#logo-footer .developer{ 
-    color: var(--subtitulo);
-    font-weight: 500;
-    font-style: italic;
-}
-#logo-footer .gilberto{ 
-    color: var(--destaque);
-    font-weight: bold;
-    font-style: italic;
-}
-#logo-footer .maior-menor{
-    -webkit-text-stroke: 1px var(--destaque);
-    color: transparent;
-    font-size: 1.3em;
-    font-weight: bold;
-}
-
 footer p{
     font-size: 12px;
+    color: var(--subtitulo);
+}
+
+/* LOGOMARCA DO FOOTER */
+
+footer .logo-animado{
+    font-size: .9em;
+}
+
+footer .maior-menor{
+    font-size: 1.4em;
 }
 
 /* BOTÃO "IR PARA O TOPO" */
