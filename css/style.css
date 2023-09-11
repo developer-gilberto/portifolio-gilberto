@@ -275,6 +275,7 @@ header{
     top: 70px;
     right: -320px;
     min-width: 300px;
+    max-height: 100vh;
     transition: .4s ease-in-out;
     z-index: 9999;
 }
@@ -288,6 +289,7 @@ header{
     background-image: linear-gradient(to top, var(--black-white), var(--secundaria));
     border: .0625rem solid var(--subtitulo);
     border-radius: 50%;
+    margin-bottom: .625rem;
 }
 
 .container-email{
@@ -295,7 +297,6 @@ header{
     justify-content: center;
     align-items: center;
     gap: .3125rem;
-    margin-top: .625rem;
 }
 
 .container-email #icon_email{
@@ -315,7 +316,7 @@ header{
     justify-content: center;
     align-items: center;
     gap: .3125rem;
-    margin-top: .625rem;
+    margin: .625rem;
 }
 
 .container-sociais .bx{
@@ -337,7 +338,7 @@ header{
     border: none;
     border-radius: 20px;
     padding: .3125rem;
-    margin-top: 1.625rem;
+    margin: 1.625rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -385,16 +386,16 @@ header{
 }
 
 .div-ul{
-    margin-top: 1.25rem;
     min-width: 100%;
-    max-height: 300px;
+    display: flex;
+    max-height: calc(100vh - 91px);
     overflow-y: auto;
 }
 
 .menu ul{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     min-width: 100%;
     margin-top: 1.625rem;
@@ -405,11 +406,10 @@ header{
     justify-content: center;
     align-items: center;
     min-width: 100%;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.355);
-    cursor: pointer;
 }
 
 .itens-menu-mobile{
+    border-bottom: 1px solid rgba(128, 128, 128, 0.355);
     color: var(--subtitulo);
     font-size: 1rem;
     font-weight: bold;
@@ -417,6 +417,7 @@ header{
     text-align: center;
     padding: .625rem;
     transition: .3s;
+    cursor: pointer;
 }
 
 .itens-menu-mobile:hover{
@@ -521,12 +522,12 @@ p{
 
 .img-dev-home{
     max-width: 120px;
-    animation: animaDev .7s linear infinite alternate-reverse;
+    animation: animaDev 1s linear infinite alternate-reverse;
 }
 
 @keyframes animaDev{
     0%{
-        filter: drop-shadow(0px 0px 2px var(--destaque));
+        filter: drop-shadow(0px 0px 1px var(--destaque));
     }
     100%{
         filter: drop-shadow(0px 0px 10px var(--destaque));
@@ -598,27 +599,56 @@ p{
     justify-content: center;
     align-items: center;
     width: 50%;
+    position: relative;
+}
+
+.container-img-sobremim::after{
+    content: '';
+    width: 105%;
+    height: 105%;
+    position: absolute;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    border-top: 1.5px solid var(--destaque);
+    border-bottom: 1.5px solid var(--destaque);
+    animation: girar 8s linear infinite;
+}
+
+.container-img-sobremim::before{
+    content: '';
+    width: 110%;
+    height: 110%;
+    position: absolute;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    border-left: 3px solid var(--secundaria);
+    border-right: 3px solid var(--secundaria);
+    animation: girarReverse 4s linear infinite alternate-reverse;
+}
+
+@keyframes girar{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes girarReverse{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-180deg);
+    }
 }
 
 .img-gil-sobremim{
     /* filter: drop-shadow(0px 0px 5px var(--destaque)); */
     background-image: linear-gradient(to top, var(--black-white), var(--secundaria));
-    box-shadow: 5px 7px 10px #000000ab;
     max-width: 100%;
-    border:1px solid var(--secundaria);
-    border-radius: 50%;
-    animation: animadaImg 1.5s linear infinite alternate;
-
-    /* ANIMAR BORDA */
-}
-
-@keyframes animadaImg{
-    0%{
-        transform: translateY(0px);
-    }
-    100%{
-        transform: translateY(-20px);
-    }
+    border-radius: 50%;    
 }
 
 /* SECTION SKILLS */
@@ -668,6 +698,16 @@ p{
     font-size: 6rem;
     margin: .625rem;
     transition: .3s;
+    animation: animadaImg 1s linear infinite alternate;
+}
+
+@keyframes animadaImg{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.1);
+    }
 }
 
 #html{
@@ -692,6 +732,7 @@ p{
 
 .tux{
     width: 5.5rem;
+    animation: animadaImg 1s linear infinite alternate;
 }
 
 .container-soft-skills{

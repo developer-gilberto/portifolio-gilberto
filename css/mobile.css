@@ -34,17 +34,6 @@
     .nav-desktop{
         display: none;
     }
-
-    /* HOME */
-
-    /* #home{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-        padding: 0 1.25rem;
-    } */
     .boas-vindas{
         font-size: 1rem;
         margin-top: 71px;
@@ -119,4 +108,17 @@
         font-size: 35px;
     }
 
+}
+
+/* DISPOSITIVO NA ORIENTAÇÃO PAISAGEM */
+
+@media screen and (orientation: landscape){
+
+    #home{
+        padding: 71px 1.25rem;
+    }
+
+    #skills{
+        padding: 71px 1.25rem;
+    }
 }
