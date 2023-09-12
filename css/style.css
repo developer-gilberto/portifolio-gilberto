@@ -80,6 +80,7 @@ html, body{
 
 .overlay.open-overlay{
     display: flex;
+    z-index: 3;
 }
 
 /* HEADER */
@@ -94,7 +95,7 @@ header{
     min-width: 100%;
     height: 70px;
     position: fixed;
-    z-index: 1;
+    z-index: 6;
 }
 
 /* LOGOMARCA */
@@ -762,7 +763,48 @@ p{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 71px 0;
+    padding: 71px 0rem;
+
+    overflow-x: hidden;
+    margin: 0 auto;
+    max-width: 1110px;
+    position: relative;
+}
+
+.bxs-left-arrow-circle{
+    color: var(--destaque);
+    background-color: var(--p);
+    /* box-shadow: 5px 5px 5px #000; */
+    border-radius: 50%;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    cursor: pointer;
+    z-index: 2;
+    transition: .3s ease-in-out;
+}
+
+.bxs-left-arrow-circle:hover{
+    color: var(--secundaria);
+}
+
+.bxs-right-arrow-circle{
+    color: var(--destaque);
+    background-color: var(--p);
+    /* box-shadow: 5px 5px 5px #000; */
+    border-radius: 50%;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    cursor: pointer;
+    z-index: 2;
+    transition: .3s ease-in-out;
+}
+
+.bxs-right-arrow-circle:hover{
+    color: var(--secundaria);
 }
 
 #projetos h2{
@@ -771,7 +813,7 @@ p{
 
 #projetos p{
     color: var(--p);
-    text-indent: 30px;
+    /* text-indent: 30px; */
     text-align: justify;
     padding: 1.25rem;
     max-width: 900px;
@@ -780,11 +822,15 @@ p{
 .container-projetos{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+
+    flex-wrap: nowrap;
+
+    justify-content: space-between;
     align-items: center;
-    min-width: 100%;
     margin-top: 2rem;
+
+    min-width: 100%;
+    transition: .5s ease-in-out;
 }
 
 .card-projetos{
@@ -792,7 +838,14 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
+}
+
+.projeto-vazio {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
 }
 
 .card-projetos .bxl-html5{

@@ -86,3 +86,23 @@ window.addEventListener('scroll', () => {
         btnIrParaTopo.style.display = 'none';
     }
 });
+
+// SLIDE PROJETOS
+
+const arrowLeft = document.querySelector('.bxs-left-arrow-circle');
+const arrowRight = document.querySelector('.bxs-right-arrow-circle');
+const containerProjetos = document.querySelector('.container-projetos');
+
+let pixels = 0;
+
+arrowLeft.addEventListener('click', () => {
+    
+    pixels += 360;
+    containerProjetos.style.transform = `translateX(${pixels}px)`;
+});
+
+arrowRight.addEventListener('click', () => {
+
+    pixels -= 360;
+    containerProjetos.style.transform = `translateX(${pixels}px)`;
+});
