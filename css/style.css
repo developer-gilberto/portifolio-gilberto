@@ -773,8 +773,8 @@ p{
 
 .bxs-left-arrow-circle{
     color: var(--destaque);
-    background-color: var(--p);
-    /* box-shadow: 5px 5px 5px #000; */
+    /* background-color: var(--p);
+    box-shadow: 5px 5px 5px #000; */
     border-radius: 50%;
     font-size: 40px;
     position: absolute;
@@ -791,8 +791,8 @@ p{
 
 .bxs-right-arrow-circle{
     color: var(--destaque);
-    background-color: var(--p);
-    /* box-shadow: 5px 5px 5px #000; */
+    /* background-color: var(--p);
+    box-shadow: 5px 5px 5px #000; */
     border-radius: 50%;
     font-size: 40px;
     position: absolute;
