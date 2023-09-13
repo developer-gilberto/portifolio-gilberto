@@ -67,11 +67,11 @@ const linkLinkedin = document.querySelector('#linkedin');
 const linkYoutube = document.querySelector('#yt');
 
 linkLinkedin.addEventListener('click', () => {
-    alert('EM BREVE!!!');
+    alert('EM BREVE...');
 });
 
 linkYoutube.addEventListener('click', () => {
-    alert('EM BREVE!!!');
+    alert('EM BREVE...');
 });
 
 // BOTÃO "IR PARA O TOPO"
@@ -93,7 +93,7 @@ const arrowLeft = document.querySelector('.bxs-left-arrow-circle');
 const arrowRight = document.querySelector('.bxs-right-arrow-circle');
 const containerProjetos = document.querySelector('.container-projetos');
 
-let pixels = 0;
+let pixels = 360;
 
 arrowLeft.addEventListener('click', () => {
     

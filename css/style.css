@@ -778,7 +778,7 @@ p{
     border-radius: 50%;
     font-size: 40px;
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 0;
     cursor: pointer;
     z-index: 2;
@@ -796,7 +796,7 @@ p{
     border-radius: 50%;
     font-size: 40px;
     position: absolute;
-    top: 50%;
+    top: 60%;
     right: 0;
     cursor: pointer;
     z-index: 2;
@@ -831,6 +831,7 @@ p{
 
     min-width: 100%;
     transition: .5s ease-in-out;
+    transform: translateX(360px);
 }
 
 .card-projetos{
