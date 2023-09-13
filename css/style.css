@@ -274,7 +274,7 @@ header{
     padding: 1.25rem .625rem;
     position: absolute;
     top: 70px;
-    right: -320px;
+    right: -330px;
     min-width: 300px;
     max-height: 100vh;
     transition: .4s ease-in-out;
@@ -282,7 +282,7 @@ header{
 }
 
 .anima-menu{
-    transform: translateX(-320px);
+    transform: translateX(-330px);
 }
 
 .img-profile{
