@@ -939,10 +939,12 @@ p{
 
 #contato form h2{
     color: var(--destaque);
+    text-shadow: 1px 1px 0px var(--destaque3);
 }
 
 #contato form{
-    backdrop-filter: blur(50px);
+    /* backdrop-filter: blur(50px); */
+    background-color: transparent;
     outline: none;
     border: 1px solid var(--secundaria);
     box-shadow: 8px 10px 7px #00000063;
