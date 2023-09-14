@@ -332,6 +332,24 @@ header{
     cursor: pointer;
 }
 
+.btn-como-quer-ser-chamado{
+    background-color: var(--bg-second);
+    color: var(--subtitulo);
+    font-weight: 500;
+    border: none;
+    border-radius: 20px;
+    padding: 2px 10px;
+    border: 1px solid rgba(128, 128, 128, 0.355);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.btn-como-quer-ser-chamado:hover{
+    color: var(--destaque);
+    background-color: var(--bg-hover-itens-menu);
+    box-shadow: 1px 1px 5px #000000e2;
+}
+
 #btn-tema{
     background-color: var(--subtitulo);
     width: 50px;
@@ -451,6 +469,16 @@ p{
     align-items: center;
     min-height: 100vh;
     padding: 0 1.25rem;
+}
+
+#acenando{
+    color: var(--destaque);
+    font-size: 30px;
+}
+
+#user-name{
+    color: var(--destaque);
+    font-weight: bold;
 }
 
 .boas-vindas{
@@ -593,6 +621,19 @@ p{
     text-align: justify;
     text-indent: 30px;
     margin-right: 2rem;
+}
+
+blockquote{
+    color: var(--p);
+    font-size: .9rem;
+    font-style: italic;
+    text-align: justify;
+    text-indent: 30px;
+    margin-right: 2rem;
+}
+
+cite{
+    color: var(--subtitulo);
 }
 
 .container-img-sobremim{
