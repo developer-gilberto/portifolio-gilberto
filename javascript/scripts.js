@@ -67,22 +67,6 @@ btnTema.addEventListener('click', () => {
     html.classList.toggle('dark');
 });
 
-// SLIDE PROJETOS
-
-const arrowLeft = document.querySelector('.bxs-left-arrow-circle');
-const arrowRight = document.querySelector('.bxs-right-arrow-circle');
-const containerProjetos = document.querySelector('.container-projetos');
-let pixelsMoverX = 360;
-
-arrowLeft.addEventListener('click', () => {
-    pixelsMoverX += 360;
-    containerProjetos.style.transform = `translateX(${pixelsMoverX}px)`;
-});
-arrowRight.addEventListener('click', () => {
-    pixelsMoverX -= 360;
-    containerProjetos.style.transform = `translateX(${pixelsMoverX}px)`;
-});
-
 // BOTÃO "IR PARA O TOPO"
 
 const btnIrParaTopo = document.querySelector('#btn-topo');
@@ -106,6 +90,9 @@ btnComoQuerSerChamado.addEventListener('click', () => {
     // let horaAtual = 6; TESTAR HORAS MANUALMENTE
     let bomDiaTardeNoite;
     const boasVindas = document.querySelector('.boas-vindas');
+    const olaUser = document.querySelector('.ola-fulano');
+    const entaoFulano = document.querySelector('.entao');
+    const contatoUser = document.querySelector('.contato-user');
 
         if(horaAtual == 0 || horaAtual < 6){
             bomDiaTardeNoite = 'Boa madrugada';
@@ -122,9 +109,7 @@ btnComoQuerSerChamado.addEventListener('click', () => {
         
         if(userName == null || userName == "" || userName == undefined){
             alert(`[ERRO] \n Ops! Parece que você não digitou seu nome. \n Por favor tente novamente.`);
-            boasVindas.innerHTML = `
-                Olá! Estou feliz que você tenha reservado um tempinho para visitar meu site. Seja muito bem vindo(a)! Espero que goste.
-            `
+            
             openCloseMenu();
         }   
         else {
@@ -133,6 +118,18 @@ btnComoQuerSerChamado.addEventListener('click', () => {
                 <span id="acenando" class="material-symbols-outlined">emoji_people</span>
                 ${bomDiaTardeNoite} <span id="user-name">${userName.toUpperCase()}</span>.<br>
                 É um prazer receber sua agradável visita ao meu site. Seja muito bem vindo(a)! Espero que goste.
+            `
+            olaUser.innerHTML =
+            `
+            👋 Olá <span id="user-name">${userName.toUpperCase()}</span>, prazer em te conhecer, meu nome é Gilberto Lopes.
+            `
+            entaoFulano.innerHTML =
+            `
+            Então <span id="user-name">${userName.toUpperCase()}</span>, aqui você encontra alguns dos projetos que fiz com o objetivo de praticar os conhecimentos que estou adquirindo. Clique em "Visitar projeto" para acessar o deploy do projeto ou, caso queira analisar o código e saber como o projeto foi feito, clique em "Código fonte". Observação: Todos os projetos são responsivos.
+            `
+            contatoUser.innerHTML =
+            `
+            Eai <span id="user-name">${userName.toUpperCase()}</span>, gostou? Então entre em contato para contratar-me, dar dicas, sugestões de melhorias ou até mesmo relatar bugs.
             `
             openCloseMenu();
         };

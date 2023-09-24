@@ -66,6 +66,14 @@
     h3{
         margin: .625rem;
     }
+
+    .container-projetos{
+        padding: 0;
+    }
+    
+    blockquote{
+        margin-right: 0rem;
+    }
 }
 
 @media screen and (max-width: 650px){
@@ -119,6 +127,10 @@
     }
 
     #skills{
+        padding: 71px 1.25rem;
+    }
+    
+    #projetos{
         padding: 71px 1.25rem;
     }
 }
