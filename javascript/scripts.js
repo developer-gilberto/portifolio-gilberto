@@ -61,10 +61,16 @@ linkYoutube.addEventListener('click', () => {
 const btnTema = document.querySelector('#btn-tema');
 const html = document.querySelector('html');
 const interruptorBtnTema = document.querySelector('.ball');
+const iphone = document.querySelectorAll('.iphone');
 
 btnTema.addEventListener('click', () => {
     interruptorBtnTema.classList.toggle('anima-ball');
     html.classList.toggle('dark');
+
+    iphone.forEach(phone => {
+
+        phone.classList.toggle('preto');
+    });
 });
 
 // BOTÃO "IR PARA O TOPO"
@@ -121,7 +127,8 @@ btnComoQuerSerChamado.addEventListener('click', () => {
             `
             olaUser.innerHTML =
             `
-            👋 Olá <span id="user-name">${userName.toUpperCase()}</span>, prazer em te conhecer, meu nome é Gilberto Lopes.
+            👋 Olá <span id="user-name">${userName.toUpperCase()}</span>, prazer em te conhecer.<br>
+            Meu nome é Gilberto Lopes.
             `
             entaoFulano.innerHTML =
             `

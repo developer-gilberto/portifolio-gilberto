@@ -174,7 +174,7 @@ header{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    transition: .3s;
+    transition: .2s;
 }
 
 .nav-desktop ul li a:hover{
@@ -437,11 +437,28 @@ header{
     padding: .625rem;
     transition: .3s;
     cursor: pointer;
+
+    position: relative;
 }
 
 .itens-menu-mobile:hover{
     color: var(--destaque);
+}
+
+.itens-menu-mobile::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
     background-color: var(--bg-hover-itens-menu);
+    z-index: -2;
+    transition: .3s;
+}
+
+.itens-menu-mobile:hover::before{
+    width: 100%;
 }
 
 /* SUBTÍTULOS E PARÁGRAFOS*/
@@ -806,6 +823,7 @@ cite{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding-top: 71px;
 }
 
 #projetos h2{
@@ -855,18 +873,22 @@ cite{
 /* IPHONE */
 
 .iphone{
-    border-radius: 50px;
-    background-image: url(../img/iphone-5.png);
+    border-radius: 30px;
+    background-image: url(../img/iphone-branco.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     width: 300px;
-    height: 600px;
-    padding: 70px 15px;
+    height: 624px;
+    padding: 75px 15px;
     margin: 1.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.iphone.preto{
+    background-image: url(../img/iphone-preto.png);
 }
 
 .iphone img{
@@ -876,12 +898,14 @@ cite{
     margin: 0 auto;
     width: 100%;
     height: 100%;
+    border: 1px solid #a3a3a3;
 }
 .card-projetos a{
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 5px 5px 5px #00000056;
+    background-color: var(--bg-second);
     color: var(--subtitulo);
     width: calc(100% - 50px);
     border-radius: 20px;
@@ -891,12 +915,28 @@ cite{
     font-size: 1em;
     margin: 10px;
     transition: 0.3s ease-in-out;
+    z-index: 0;
+    position: relative;
 }
 .card-projetos a:hover{
-    border-radius: 30px;
-    background-color: var(--destaque);
-    color: var(--black-white);
-    font-weight: bold;
+    color: var(--destaque);
+}
+
+.card-projetos a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--bg-hover-itens-menu);
+    z-index: -1;
+    transition: .3s;
+    border-radius: 20px;
+}
+
+.card-projetos a:hover::before{
+    width: 100%;
 }
 
 .card-projetos a .bx-link-external{
@@ -940,7 +980,7 @@ cite{
 }
 
 #contato form{
-    /* backdrop-filter: blur(50px); */
+    backdrop-filter: blur(10px);
     background-color: transparent;
     outline: none;
     border: 1px solid var(--secundaria);
@@ -1023,15 +1063,17 @@ cite{
     margin-top: 1.25rem;
     border: 1px solid var(--secundaria);
     color: var(--secundaria);
+    background-color: #f2edff;
     transition: .3s ease-in-out;
     cursor: pointer;
     border-radius: 1.25rem;
     font-weight: bold;
 }
 
-#contato .btn-form:hover{
+ #contato .btn-form:hover{
     background-color: var(--destaque);
-    color: var(--black-white);
+    border: 1px solid var(--destaque);
+    color: #f2edff;
 }
 
 /* FOOTER */
