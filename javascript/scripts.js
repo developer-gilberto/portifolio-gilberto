@@ -136,7 +136,7 @@ btnComoQuerSerChamado.addEventListener('click', () => {
             `
             contatoUser.innerHTML =
             `
-            Eai <span id="user-name">${userName.toUpperCase()}</span>, gostou? Então entre em contato para contratar-me, dar dicas, sugestões de melhorias ou até mesmo relatar bugs.
+            E ai <span id="user-name">${userName.toUpperCase()}</span>, gostou? Então entre em contato para contratar-me, dar dicas, sugestões de melhorias ou até mesmo relatar bugs.
             `
             openCloseMenu();
         };
