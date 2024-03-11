@@ -16,6 +16,7 @@ function openCloseMenu(){
 
 // ABRE/FECHA MENU MOBILE
 
+const checkboxMenuBurguer = document.querySelector('#checkbox_menu_hamburguer');
 const btnMenuBurguer = document.querySelector('#btn-burguer');
 
 btnMenuBurguer.addEventListener('click', () => {
@@ -56,21 +57,55 @@ linkYoutube.addEventListener('click', () => {
     alert('EM BREVE...');
 });
 
-// DARK MODE
+// DARK/LIGHT MODE
 
-const btnTema = document.querySelector('#btn-tema');
-const html = document.querySelector('html');
 const interruptorBtnTema = document.querySelector('.ball');
 const iphone = document.querySelectorAll('.iphone');
+const html = document.querySelector('html');
+const checkboxDarkMode = document.querySelector('#checkbox_mode_dark_light');
 
-btnTema.addEventListener('click', () => {
-    interruptorBtnTema.classList.toggle('anima-ball');
-    html.classList.toggle('dark');
+checkboxDarkMode.addEventListener('change', () => {
 
-    iphone.forEach(phone => {
+    if(checkboxDarkMode.checked){
+        interruptorBtnTema.classList.remove('anima-ball');
+        html.classList.remove('light');
+        iphone.forEach(iphone => {
+            iphone.classList.remove('branco');
+        });
 
-        phone.classList.toggle('preto');
-    });
+        checkboxDarkMode.checked = true;
+        localStorage.setItem('darkMode', JSON.stringify(true));
+    } else {
+        interruptorBtnTema.classList.add('anima-ball');
+        html.classList.add('light');
+        iphone.forEach(iphone => {
+            iphone.classList.add('branco');
+        });
+
+        localStorage.setItem('darkMode', JSON.stringify(false));
+        checkboxDarkMode.checked = false;
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const darkMode = JSON.parse(localStorage.getItem('darkMode'));
+
+    if(darkMode){
+        checkboxDarkMode.checked = true;
+
+        interruptorBtnTema.classList.remove('anima-ball');
+        html.classList.remove('light');
+        iphone.forEach(iphone => {
+            iphone.classList.remove('branco');
+        });
+    } else {
+        interruptorBtnTema.classList.add('anima-ball');
+        html.classList.add('light');
+        iphone.forEach(iphone => {
+            iphone.classList.add('branco');
+        });
+    }
 });
 
 // BOTÃO "IR PARA O TOPO"

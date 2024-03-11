@@ -34,6 +34,9 @@
     .nav-desktop{
         display: none;
     }
+    code{
+        font-size: 16px;
+    }
     .boas-vindas{
         font-size: 1rem;
         margin-top: 71px;
@@ -77,6 +80,10 @@
 }
 
 @media screen and (max-width: 650px){
+
+    #home{
+        padding-top: 71px;
+    }
 
     .gilberto-lopes{
         font-size: 2rem;

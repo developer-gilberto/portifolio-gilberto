@@ -1,5 +1,119 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* FONT-WEIGHT 100 */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-Thin.ttf) format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-ThinItalic.ttf) format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+/* FONT-WEIGHT 200 */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-ExtraLight.ttf) format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-ExtraLightItalic.ttf) format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* FONT-WEIGHT 300 */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-Light.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-LightItalic.ttf) format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* FONT-WEIGHT 400 */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-Italic.ttf) format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* FONT-WEIGHT 500 */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-MediumItalic.ttf) format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* FONT-WEIGHT 700 */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-BoldItalic.ttf) format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* FONT-WEIGHT 800 */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-ExtraBold.ttf) format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-ExtraBoldItalic.ttf) format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* FONT-WEIGHT 900 */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-Black.ttf) format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-BlackItalic.ttf) format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* RESET CSS */
+
 *{
     margin: 0;
     padding: 0;
@@ -10,25 +124,12 @@
     scroll-behavior: smooth;
 }
 
-/* LIGHT MODE */
+/* VARIÁVEIS CSS */
+
+/* DARK MODE */
 
 :root{
-    --P: #000;
-    --destaque: #0075de;
-    --destaque2: #0AFFEB;
-    --destaque3: #004077;
-    --subtitulo: #778899;
-    --secundaria: #1696FF;
-    --bg-primary:#f2edff;
-    --bg-second: #f2edff;
-    --black-white: #fff; 
-    --bg-hover-itens-menu: #d3d3d38a;
-}
-
-/* CLASS DARK MODE */
-
-.dark:root{
-    --p: #fff;
+    --p: #afadad;
     --destaque: #0075de;
     --destaque2: #0AFFEB;
     --destaque3: #004077;
@@ -38,6 +139,21 @@
     --bg-second: #2b2a33;
     --black-white: #000;
     --bg-hover-itens-menu: #272727;
+}
+
+/* CLASS LIGHT MODE */
+
+.light:root{
+    --p: #000;
+    --destaque: #0075de;
+    --destaque2: #0AFFEB;
+    --destaque3: #004077;
+    --subtitulo: #778899;
+    --secundaria: #1696FF;
+    --bg-primary:#f2edff;
+    --bg-second: #f2edff;
+    --black-white: #fff; 
+    --bg-hover-itens-menu: #d3d3d38a;
 }
 
 /* HTML / BODY */
@@ -350,7 +466,11 @@ header{
     box-shadow: 1px 1px 5px #000000e2;
 }
 
-#btn-tema{
+#checkbox_mode_dark_light{
+    opacity: 0;
+}
+
+.label_mode_dark_light{
     background-color: var(--subtitulo);
     width: 50px;
     height: 25px;
@@ -364,13 +484,6 @@ header{
     position: relative;
     cursor: pointer;
     transition: 1s;
-}
-
-#btn-tema label{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
 }
 
 .ball{
@@ -394,12 +507,12 @@ header{
     left: 25px;
 }
 
-#btn-tema #moon{
+#moon{
     color: #09ecd9e9;
     font-size: 20px;
 }
 
-#btn-tema #sun{
+#sun{
     color: rgb(255, 255, 0);
     font-size: 20px;
 }
@@ -486,6 +599,35 @@ p{
     align-items: center;
     min-height: 100vh;
     padding: 0 1.25rem;
+}
+
+code{
+    color: var(--destaque);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 30px 0;
+}
+
+.log{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
+    color: var(--subtitulo);
+}
+
+.parenteses{
+    color: var(--subtitulo);
+    font-weight: lighter;
+}
+
+.aspas{
+    color: var(--destaque);
+}
+
+.hello_world{
+    color: var(--secundaria);
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: lighter;
 }
 
 #acenando{
@@ -874,7 +1016,7 @@ cite{
 
 .iphone{
     border-radius: 30px;
-    background-image: url(../img/iphone-branco.png);
+    background-image: url(../img/iphone-preto.png);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -887,8 +1029,8 @@ cite{
     align-items: center;
 }
 
-.iphone.preto{
-    background-image: url(../img/iphone-preto.png);
+.iphone.branco{
+    background-image: url(../img/iphone-branco.png);
 }
 
 .iphone img{
