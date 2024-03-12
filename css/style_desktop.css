@@ -150,7 +150,7 @@
     --destaque3: #004077;
     --subtitulo: #778899;
     --secundaria: #1696FF;
-    --bg-primary:#f2edff;
+    --bg-primary:#fbfbfe;
     --bg-second: #f2edff;
     --black-white: #fff; 
     --bg-hover-itens-menu: #d3d3d38a;
@@ -418,7 +418,7 @@ header{
 
 .container-email #icon_email{
     color: var(--subtitulo);
-    font-size: 1.3rem;
+    font-size: 1.1rem;
 }
 
 .container-email .adress-email{
@@ -438,7 +438,7 @@ header{
 
 .container-sociais .bx{
     color: var(--subtitulo);
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin: 0 .625rem;
     transition: .3s;
 }
@@ -609,6 +609,11 @@ code{
     margin: 30px 0;
 }
 
+#icon_console{
+    color: var(--subtitulo);
+    font-size: 20px;
+}
+
 .log{
     font-family: 'Courier New', Courier, monospace;
     font-weight: lighter;
@@ -630,15 +635,9 @@ code{
     font-weight: lighter;
 }
 
-#acenando{
-    color: var(--destaque);
-    font-size: 30px;
-}
-
 #user-name{
     color: var(--destaque);
     font-weight: bold;
-    /* text-shadow: 1px 1px 0px #000; */
 }
 
 .boas-vindas{
@@ -702,11 +701,12 @@ code{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
 }
 
 .container-tecnologias .bx{
     color: var(--secundaria);
-    font-size: 2rem;
+    font-size: 36px;
 }
 
 .img-dev-home{
@@ -926,14 +926,19 @@ cite{
 }
 
 #node{
-    color: rgb(19, 153, 5);
+    filter: drop-shadow( 1px 1px 0px #000);
+    color: #139905;
+    animation: animadaImg 1s linear infinite alternate;
 }
 
 #git{
+    filter: drop-shadow( 1px 1px 0px #000);
     color: #E84D31;
+    animation: animadaImg 1s linear infinite alternate;
 }
 
 .tux{
+    filter: drop-shadow( 1px 1px 0px #000);
     width: 5.5rem;
     animation: animadaImg 1s linear infinite alternate;
 }
@@ -1089,7 +1094,7 @@ cite{
 
 .card-projetos a .bx-code-alt{
     color: var(--secundaria);
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     margin: .3125rem;
 }
 

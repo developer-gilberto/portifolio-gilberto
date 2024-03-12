@@ -155,9 +155,7 @@ btnComoQuerSerChamado.addEventListener('click', () => {
         }   
         else {
             boasVindas.innerHTML = 
-            `
-                <span id="acenando" class="material-symbols-outlined">emoji_people</span>
-                ${bomDiaTardeNoite} <span id="user-name">${userName.toUpperCase()}</span>.<br>
+            `   ${bomDiaTardeNoite} <span id="user-name">${userName.toUpperCase()}</span>.<br>
                 É um prazer receber sua agradável visita ao meu site. Seja muito bem vindo(a)! Espero que goste.
             `
             olaUser.innerHTML =

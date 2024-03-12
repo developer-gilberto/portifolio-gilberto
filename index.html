@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Gilberto Lopes">
-    <meta name="description" content="Portifólio Gilberto Lopes Developer">
-    <meta name="keywords" content=" portfólio, portfolio, gilberto lopes, developer, desenvolvedor, programmer">
-    <link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mobile.css" media="screen">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="description" content="Portfolio Gilberto - Fullstack developer 💻">
+    <meta name="keywords" content=" portfólio, portfolio, gilberto lopes, developer, desenvolvedor, programmer, full stack developer, front-end, back-end, javascript, html, css, nodejs, express">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="icons/favicon/favicon.ico" type="image/x-icon">
+    <!-- css desktop -->
+    <link rel="stylesheet" href="css/style_desktop.css">
+    <!-- css mobile -->
+    <link rel="stylesheet" href="css/style_mobile.css" media="screen">
+    <!-- icons -->
+    <link rel="stylesheet" href="icons/icons_remix/remixicon.css">
+    <!-- JavaScript -->
     <script defer src="javascript/scripts.js"></script>
+
     <title>Gilberto Lopes</title>
+
 </head>
+
 <body>
 
     <!-- OVERLAY -->
@@ -71,23 +78,23 @@
                     </li>
                     <li>
                         <div class="container-email">
-                            <span id="icon_email" class="material-symbols-outlined">mail</span>
+                            <i id="icon_email" class="ri-mail-line material-symbols-outlined"></i>
                             <p class="adress-email">developer.gilberto@gmail.com</p>
                         </div>
                     </li>
                     <li>
                         <div class="container-sociais">
                             <a href="https://github.com/developer-gilberto" target="_blank" rel="noopener noreferrer">
-                                <i class='bx bxl-github'></i>
+                                <i class="ri-github-fill bx"></i>
                             </a>
                             <a href="https://www.instagram.com/developer.gilberto/" target="_blank" rel="noopener noreferrer">
-                                <i class='bx bxl-instagram' ></i>
+                                <i class="ri-instagram-line bx"></i>
                             </a>
                             <a id="linkedin" href="#">
-                                <i class='bx bxl-linkedin-square' ></i>
+                                <i class="ri-linkedin-box-fill bx"></i>
                             </a>
                             <a id="yt" href="#">
-                                <i class='bx bxl-youtube'></i>
+                                <i class="ri-youtube-fill bx"></i>
                             </a>
                         </div>
                     </li>
@@ -98,8 +105,8 @@
                         <input type="checkbox" id="checkbox_mode_dark_light">
                         <label class="label_mode_dark_light" for="checkbox_mode_dark_light">
                             <div id="ball" class="ball"></div>
-                            <span id="moon" class="material-symbols-outlined">mode_night</span>
-                            <span id="sun" class="material-symbols-outlined">light_mode</span>
+                            <i id="moon" class="ri-moon-line"></i>
+                            <i id="sun" class="ri-sun-fill"></i>
                         </label>
                     </li>
                     <li>
@@ -128,6 +135,7 @@
         <!-- SECTION HOME -->
         <section id="home">
             <code>
+                <i id="icon_console" class="ri-terminal-fill"></i>
                 console.<span class="log">log</span><span class="parenteses">(</span><span class="hello_world"><span class="aspas">"</span>Hello World!<span class="aspas">"</span></span><span class="parenteses">)</span>;
             </code>
             <p class="boas-vindas">
@@ -141,10 +149,10 @@
                 <span class="chaves-full-stack">}</span>
             </p>
             <div class="container-tecnologias">
-                <i class='bx bxl-html5'></i>
-                <i class='bx bxl-css3'></i>
-                <i class='bx bxl-javascript'></i>
-                <i class='bx bxl-nodejs'></i>
+                <i class="ri-html5-fill bx"></i>
+                <i class="ri-css3-fill bx"></i>
+                <i class="ri-javascript-fill bx"></i>
+                <img class="node_36x36px" src="icons/icons_remix/nodejs-line.svg" alt="Node.js">
             </div>
             <img class="img-dev-home" src="img/dev.png" alt="Developer">
         </section>
@@ -183,12 +191,12 @@
                 <div class="container-hard-skills">
                     <h3>💻 Hard Skills</h3>
                     <div class="container-icons-skills">
-                        <i id="html" class='bx bxl-html5'></i>
-                        <i id="css" class='bx bxl-css3'></i>
-                        <i id="js" class='bx bxl-javascript'></i>
-                        <i id="node" class='bx bxl-nodejs'></i>
-                        <i id="git" class='bx bxl-git'></i>
-                        <img src="img/tux-full.png" alt="linux" class="tux">
+                        <i id="html" class="ri-html5-fill bx"></i>
+                        <i id="css" class="ri-css3-fill bx"></i>
+                        <i id="js" class="ri-javascript-fill bx"></i>
+                        <img id="node" class="node_36x36px" src="icons/icons_remix/nodejs-line96.svg" alt="Node.js">
+                        <img id="git" src="icons/icons_remix/git-logo-96.png" alt="Git">
+                        <img src="icons/icons_remix/tux-full.png" alt="linux" class="tux">
                     </div>
                 </div>
                 <div class="container-soft-skills">
@@ -217,79 +225,112 @@
                 <div class="card-projetos">
                     <h3>Calculadora</h3>
                     <div>
-                        <i class='bx orange5 bxl-html5'></i>
-                        <i class='bx blue3 bxl-css3' ></i>
-                        <i class='bx bxl-javascript'></i>
+                        <i class="ri-html5-fill bx orange5 bxl-html5"></i>
+                        <i class="ri-css3-fill bx blue3 bxl-css3"></i>
+                        <i class="ri-javascript-fill bx bxl-javascript"></i>
                     </div>
                     <div class="iphone">
                         <img src="img/calculadora_JS.png" alt="calculadora">
                     </div>
                     <a href="https://developer-gilberto.github.io/calculadora-javascript/" target="_blank" rel="noopener noreferrer">
-                        <i class='bx bx-link-external'></i>Visitar projeto
+                        <i class="ri-external-link-line bx-link-external"></i>Visitar projeto
                     </a>
-                    <a href="https://github.com/developer-gilberto/calculadora-javascript" target="_blank" rel="noopener noreferrer"><i class='bx bx-code-alt' ></i>Código fonte</a>
+                    <a href="https://github.com/developer-gilberto/calculadora-javascript" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-code-s-slash-line bx-code-alt"></i>
+                        Código fonte
+                    </a>
                 </div>
                 <div class="card-projetos">
                     <h3>Portifólio Gilberto</h3>
                     <div>
-                        <i class='bx orange5 bxl-html5'></i>
-                        <i class='bx blue3 bxl-css3' ></i>
-                        <i class='bx bxl-javascript'></i>
+                        <i class="ri-html5-fill bx orange5 bxl-html5"></i>
+                        <i class="ri-css3-fill bx blue3 bxl-css3"></i>
+                        <i class="ri-javascript-fill bx bxl-javascript"></i>
                     </div>
                     <div class="iphone">
                         <img src="img/portfolio_gilberto.png" alt="Portifólio Gilberto">
                     </div>
-                    <a href="#home"><i class='bx bx-link-external'></i>Visitar projeto</a>
-                    <a href="https://github.com/developer-gilberto/portifolio-gilberto/" target="_blank" rel="noopener noreferrer"><i class='bx bx-code-alt' ></i>Código fonte</a>
+                    <a href="#home">
+                        <i class="ri-external-link-line bx-link-external"></i>
+                        Visitar projeto
+                    </a>
+                    <a href="https://github.com/developer-gilberto/portifolio-gilberto/" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-code-s-slash-line bx-code-alt"></i>
+                        Código fonte
+                    </a>
                 </div>
                 <div class="card-projetos">
                     <h3>Biomédica Dhara</h3>
                     <div>
-                        <i class='bx orange5 bxl-html5'></i>
-                        <i class='bx blue3 bxl-css3' ></i>
-                        <i class='bx bxl-javascript'></i>
+                        <i class="ri-html5-fill bx orange5 bxl-html5"></i>
+                        <i class="ri-css3-fill bx blue3 bxl-css3"></i>
+                        <i class="ri-javascript-fill bx bxl-javascript"></i>
                     </div>
                     <div class="iphone">
                         <img src="img/biomedica_dhara.png" alt="Projeto Biomédica">
                     </div>
-                    <a href="https://developer-gilberto.github.io/dharabiomedica/" target="_blank" rel="noopener noreferrer"><i class='bx bx-link-external'></i>Visitar projeto</a>
-                    <a href="https://github.com/developer-gilberto/dharabiomedica" target="_blank" rel="noopener noreferrer"><i class='bx bx-code-alt' ></i>Código fonte</a>
+                    <a href="https://developer-gilberto.github.io/dharabiomedica/" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-external-link-line bx-link-external"></i>
+                        Visitar projeto
+                    </a>
+                    <a href="https://github.com/developer-gilberto/dharabiomedica" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-code-s-slash-line bx-code-alt"></i>
+                        Código fonte
+                    </a>
                 </div>
                 <div class="card-projetos">
                     <h3>Portifólio</h3>
                     <div>
-                        <i class='bx orange5 bxl-html5'></i>
-                        <i class='bx blue3 bxl-css3' ></i>
+                        <i class="ri-html5-fill bx orange5 bxl-html5"></i>
+                        <i class="ri-css3-fill bx blue3 bxl-css3"></i>
                     </div>
                     <div class="iphone">
                         <img src="img/portifolio-teste2.png" alt="Projeto Portifólio teste">
                     </div>
-                    <a href="https://developer-gilberto.github.io/portfolio/" target="_blank" rel="noopener noreferrer"><i class='bx bx-link-external'></i>Visitar projeto</a>
-                    <a href="https://github.com/developer-gilberto/portfolio/" target="_blank" rel="noopener noreferrer"><i class='bx bx-code-alt' ></i>Código fonte</a>
+                    <a href="https://developer-gilberto.github.io/portfolio/" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-external-link-line bx-link-external"></i>
+                        Visitar projeto
+                    </a>
+                    <a href="https://github.com/developer-gilberto/portfolio/" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-code-s-slash-line bx-code-alt"></i>
+                        Código fonte
+                    </a>
                 </div>
                 <div class="card-projetos">
                     <h3>Cordel moderno</h3>
                     <div>
-                        <i class='bx orange5 bxl-html5'></i>
-                        <i class='bx blue3 bxl-css3' ></i>
+                        <i class="ri-html5-fill bx orange5 bxl-html5"></i>
+                        <i class="ri-css3-fill bx blue3 bxl-css3"></i>
                     </div>
                     <div class="iphone">
                         <img src="img/cordel-moderno2.png" alt="Projeto Cordel Moderno">
                     </div>
-                    <a href="https://developer-gilberto.github.io/projeto-cordel/" target="_blank" rel="noopener noreferrer"><i class='bx bx-link-external'></i>Visitar projeto</a>
-                    <a href="https://github.com/developer-gilberto/projeto-cordel/" target="_blank" rel="noopener noreferrer"><i class='bx bx-code-alt' ></i>Código fonte</a>
+                    <a href="https://developer-gilberto.github.io/projeto-cordel/" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-external-link-line bx-link-external"></i>
+                        Visitar projeto
+                    </a>
+                    <a href="https://github.com/developer-gilberto/projeto-cordel/" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-code-s-slash-line bx-code-alt"></i>
+                        Código fonte
+                    </a>
                 </div>
                 <div class="card-projetos">
                     <h3>Mascote do Android</h3>
                     <div>
-                        <i class='bx orange5 bxl-html5'></i>
-                        <i class='bx blue3 bxl-css3' ></i>
+                        <i class="ri-html5-fill bx orange5 bxl-html5"></i>
+                        <i class="ri-css3-fill bx blue3 bxl-css3"></i>
                     </div>
                     <div class="iphone">
                         <img src="img/mascote-android2.png" alt="Projeto Mascote Android">
                     </div>
-                    <a href="https://developer-gilberto.github.io/project-android/" target="_blank" rel="noopener noreferrer"><i class='bx bx-link-external'></i>Visitar projeto</a>
-                    <a href="https://github.com/developer-gilberto/project-android" target="_blank" rel="noopener noreferrer"><i class='bx bx-code-alt' ></i>Código fonte</a>
+                    <a href="https://developer-gilberto.github.io/project-android/" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-external-link-line bx-link-external"></i>
+                        Visitar projeto
+                    </a>
+                    <a href="https://github.com/developer-gilberto/project-android" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-code-s-slash-line bx-code-alt"></i>
+                        Código fonte
+                    </a>
                 </div>
             </div>
         </section>
@@ -301,19 +342,19 @@
                 <h2>CONTATO PROFISSIONAL</h2>
                     <div class="container-label">
                         <label for="input-name">
-                            <span class="material-symbols-outlined">person</span>
+                            <i class="ri-account-circle-line material-symbols-outlined"></i>
                         </label>
                         <input id="input-name" class="input-form" type="text" name="name" placeholder="Digite seu nome" spellcheck="false" autocomplete="off" required>
                     </div>
                     <div class="container-label">
                         <label for="input-email">
-                            <span class="material-symbols-outlined">mail</span>
+                            <i class="ri-mail-line material-symbols-outlined"></i>
                         </label>
                         <input id="input-email" class="input-form" type="email" name="email" placeholder="Digite seu e-mail" spellcheck="false" autocomplete="off" required>
                     </div>
                     <div class="container-textarea">
                         <label for="textarea">
-                            <span class="material-symbols-outlined">comment</span>
+                            <i class="ri-message-2-line material-symbols-outlined"></i>
                         </label>
                         <textarea id="textarea" name="textarea" cols="30" rows="5" spellcheck="false" autocomplete="off" placeholder="Mensagem..."></textarea>
                     </div>
@@ -340,7 +381,9 @@
         <p>All rights reserved 2023</p>
 
         <!-- BOTÃO IR PARA TOPO -->
-        <a href="#home"><i id="btn-topo" class='bx bxs-up-arrow-square'></i></a>
+        <a href="#home">
+            <i id="btn-topo" class="ri-arrow-up-line bx"></i>
+        </a>
     </footer>
 
 </body>

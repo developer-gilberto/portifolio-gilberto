@@ -1,0 +1,280 @@
+@charset "UTF-8";
+
+/* FONT-WEIGHT 100 */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-Thin.ttf) format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-ThinItalic.ttf) format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+/* FONT-WEIGHT 200 */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-ExtraLight.ttf) format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-ExtraLightItalic.ttf) format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* FONT-WEIGHT 300 */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-Light.ttf) format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-LightItalic.ttf) format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* FONT-WEIGHT 400 */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-Italic.ttf) format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* FONT-WEIGHT 500 */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-MediumItalic.ttf) format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* FONT-WEIGHT 700 */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-BoldItalic.ttf) format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* FONT-WEIGHT 800 */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-ExtraBold.ttf) format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-ExtraBoldItalic.ttf) format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* FONT-WEIGHT 900 */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-Black.ttf) format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-BlackItalic.ttf) format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* RESET CSS */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* VARIÁVEIS CSS */
+
+/* DARK MODE */
+
+:root{
+    --p: #afadad;
+    --destaque: #0075de;
+    --destaque2: #0AFFEB;
+    --destaque3: #004077;
+    --subtitulo: #778899;
+    --secundaria: #1696FF;
+    --bg-primary: #202124;
+    --bg-second: #2b2a33;
+    --black-white: #000;
+    --bg-hover-itens-menu: #272727;
+}
+
+/* CLASS LIGHT MODE */
+
+.light:root{
+    --p: #000;
+    --destaque: #0075de;
+    --destaque2: #0AFFEB;
+    --destaque3: #004077;
+    --subtitulo: #778899;
+    --secundaria: #1696FF;
+    --bg-primary:#fbfbfe;
+    --bg-second: #f2edff;
+    --black-white: #fff; 
+    --bg-hover-itens-menu: #d3d3d38a;
+}
+
+@media screen and (max-width: 980px){
+
+    .nav-desktop{
+        display: none;
+    }
+    code{
+        font-size: 16px;
+    }
+    .boas-vindas{
+        font-size: 1rem;
+        margin-top: 71px;
+    }
+    .eu-sou{
+        font-size: 1.5rem;
+    }
+    .gilberto-lopes{
+        font-size: 4rem;
+    }
+    .full-stack{
+        font-size: 1.1rem;
+    }
+    .chaves-full-stack{
+        font-size: 1.1rem;
+    }
+
+    .container-sobre{
+        flex-direction: column-reverse;
+    }
+
+    .container-texto-sobremim{
+        max-width: 700px;
+    }
+
+    .container-texto-sobremim p{
+        margin-right: 0rem;
+    }
+
+    h3{
+        margin: .625rem;
+    }
+
+    .container-projetos{
+        padding: 0;
+    }
+    
+    blockquote{
+        margin-right: 0rem;
+    }
+}
+
+@media screen and (max-width: 650px){
+
+    #home{
+        padding-top: 71px;
+    }
+
+    .gilberto-lopes{
+        font-size: 2rem;
+    }
+
+    .img-dev-home{
+        max-width: 90px;
+    }
+
+    #skills{
+        padding-top: 71px;
+    }
+
+    .container-skills{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container-hard-skills{
+        width: 300px;
+    }
+    .container-soft-skills{
+        width: 100%;
+        margin-top: 1.25rem;
+    }
+
+    .container-hard-skills .bx{
+        font-size: 4rem;
+    }
+    #node{
+        width: 4rem;
+    }
+    #git{
+        width: 4rem;
+    }
+    .tux{
+        width: 3.5rem;
+    }
+
+    footer #btn-topo{
+        font-size: 35px;
+    }
+
+}
+
+@media screen and (max-width: 350px){
+    code{
+        font-size: 14px;
+    }
+}
+
+/* DISPOSITIVO NA ORIENTAÇÃO PAISAGEM */
+
+@media screen and (orientation: landscape){
+
+    #home{
+        padding: 71px 1.25rem;
+    }
+
+    #skills{
+        padding: 71px 1.25rem;
+    }
+    
+    #projetos{
+        padding: 71px 1.25rem;
+    }
+}
