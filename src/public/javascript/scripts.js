@@ -169,3 +169,9 @@ btnComoQuerSerChamado.addEventListener('click', () => {
             openCloseMenu();
         };
 });
+
+// ATUALIZAR ANO DE: "All rights reserved (ano atual)"
+
+const data = new Date();
+const anoAtual = data.getFullYear();
+document.querySelector('.ano_atual').innerText = anoAtual;
