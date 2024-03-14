@@ -151,7 +151,7 @@
     --subtitulo: #778899;
     --secundaria: #1696FF;
     --bg-primary:#fbfbfe;
-    --bg-second: #f2edff;
+    --bg-second: #f5f5f7;
     --black-white: #fff; 
     --bg-hover-itens-menu: #d3d3d38a;
 }
@@ -460,6 +460,10 @@ header{
     transition: .3s ease-in-out;
 }
 
+.interrogacao_btn_como_deseja_serChamado{
+    color: var(--destaque);
+}
+
 .btn-como-quer-ser-chamado:hover{
     color: var(--destaque);
     background-color: var(--bg-hover-itens-menu);
@@ -635,7 +639,7 @@ code{
     font-weight: lighter;
 }
 
-#user-name{
+.user-name{
     color: var(--destaque);
     font-weight: bold;
 }
@@ -984,6 +988,14 @@ cite{
     max-width: 900px;
 }
 
+em{
+    font-weight: bold;
+}
+
+.projetos_responsivos{
+    color: var(--secundaria);
+}
+
 .container-projetos{
     display: flex;
     flex-direction: row;
@@ -1113,11 +1125,12 @@ cite{
     padding: 71px 1.25rem;
 }
 
-.contato-user{
+.mensagemPraUsuarioForm{
+    max-width: 500px;
     text-align: justify;
     color: #000;
-    background-color: rgba(173, 216, 230, 0.51);
-    padding: 5px;
+    background-color: rgba(173, 216, 230, 0.884);
+    padding: 10px;
     border-radius: 20px;
 }
 
@@ -1138,6 +1151,7 @@ cite{
     align-items: center;
     padding: 3rem 1.25rem;
     margin: 2rem 0;
+    width: 500px;
     max-width: 100%;
     border-radius: 20px;
 }

@@ -82,8 +82,8 @@ checkboxDarkMode.addEventListener('change', () => {
             iphone.classList.add('branco');
         });
 
-        localStorage.setItem('darkMode', JSON.stringify(false));
         checkboxDarkMode.checked = false;
+        localStorage.setItem('darkMode', JSON.stringify(false));
     }
 });
 
@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const darkMode = JSON.parse(localStorage.getItem('darkMode'));
 
-    if(darkMode){
+    if(darkMode || darkMode == null || darkMode == undefined){
         checkboxDarkMode.checked = true;
 
         interruptorBtnTema.classList.remove('anima-ball');
@@ -125,52 +125,47 @@ window.addEventListener('scroll', () => {
 const btnComoQuerSerChamado = document.querySelector('.btn-como-quer-ser-chamado');
 
 btnComoQuerSerChamado.addEventListener('click', () => {
-    let userName = prompt('DIGITE SEU NOME...');
-    let data = new Date();
+
+    const spanUserName = document.querySelectorAll('.user-name');
+    const userName = prompt('DIGITE SEU NOME...', "visitante");
+
+    spanUserName.forEach(name => {
+
+        name.innerText = ` ${userName.toLocaleUpperCase()}`;
+    });
+
+    const data = new Date();
     let horaAtual = data.getHours();
-    // let horaAtual = 6; TESTAR HORAS MANUALMENTE
-    let bomDiaTardeNoite;
-    const boasVindas = document.querySelector('.boas-vindas');
-    const olaUser = document.querySelector('.ola-fulano');
-    const entaoFulano = document.querySelector('.entao');
-    const contatoUser = document.querySelector('.contato-user');
+    // Descomente a linha abaixo para TESTAR AS HORAS MANUALMENTE
+    // let horaAtual = 6;
+    let cumprimentos;
+    const bomDiaTardeNoite = document.querySelector('.bomDiaTardeNoite');
+    const mensagemPraUsuarioNoForm = document.querySelector('.mensagemPraUsuarioForm');
 
         if(horaAtual == 0 || horaAtual < 6){
-            bomDiaTardeNoite = 'Boa madrugada';
+            cumprimentos = 'Boa madrugada';
         }
         else if(horaAtual >= 6 && horaAtual < 12){
-            bomDiaTardeNoite = 'Bom dia';
+            cumprimentos = 'Bom dia';
         }
         else if(horaAtual >= 12 && horaAtual < 18){
-            bomDiaTardeNoite = 'Boa tarde';
+            cumprimentos = 'Boa tarde';
         }
         else if(horaAtual >= 18 && horaAtual <= 23){
-            bomDiaTardeNoite = 'Boa noite';
+            cumprimentos = 'Boa noite';
         };
         
         if(userName == null || userName == "" || userName == undefined){
+
             alert(`[ERRO] \n Ops! Parece que você não digitou seu nome. \n Por favor tente novamente.`);
             
             openCloseMenu();
         }   
         else {
-            boasVindas.innerHTML = 
-            `   ${bomDiaTardeNoite} <span id="user-name">${userName.toUpperCase()}</span>.<br>
-                É um prazer receber sua agradável visita ao meu site. Seja muito bem vindo(a)! Espero que goste.
-            `
-            olaUser.innerHTML =
-            `
-            👋 Olá <span id="user-name">${userName.toUpperCase()}</span>, prazer em te conhecer.<br>
-            Meu nome é Gilberto Lopes.
-            `
-            entaoFulano.innerHTML =
-            `
-            Então <span id="user-name">${userName.toUpperCase()}</span>, aqui você encontra alguns dos projetos que fiz com o objetivo de praticar os conhecimentos que estou adquirindo. Clique em "Visitar projeto" para acessar o deploy do projeto ou, caso queira analisar o código e saber como o projeto foi feito, clique em "Código fonte". Observação: Todos os projetos são responsivos.
-            `
-            contatoUser.innerHTML =
-            `
-            E ai <span id="user-name">${userName.toUpperCase()}</span>, gostou? Então entre em contato para contratar-me, dar dicas, sugestões de melhorias ou até mesmo relatar bugs.
-            `
+            bomDiaTardeNoite.innerText = cumprimentos;
+
+            mensagemPraUsuarioNoForm.innerHTML = `Então <span class="user-name">${userName.toUpperCase()}</span>, gostou? Entre em contato através do formulário abaixo ou através das minhas redes sociais para contratar-me, dar dicas, sugestões de melhorias ou até mesmo relatar bugs. Estou à sua disposição ; )`
+
             openCloseMenu();
         };
 });
