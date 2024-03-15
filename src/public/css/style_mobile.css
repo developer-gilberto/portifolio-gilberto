@@ -151,7 +151,7 @@
     --subtitulo: #778899;
     --secundaria: #1696FF;
     --bg-primary:#fbfbfe;
-    --bg-second: #f2edff;
+    --bg-second: #f5f5f7;
     --black-white: #fff; 
     --bg-hover-itens-menu: #d3d3d38a;
 }
@@ -244,10 +244,10 @@
         width: 4rem;
     }
     #git{
-        width: 4rem;
+        width: 3.6rem;
     }
     .tux{
-        width: 3.5rem;
+        width: 4.3rem;
     }
 
     footer #btn-topo{

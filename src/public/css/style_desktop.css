@@ -930,20 +930,21 @@ cite{
 }
 
 #node{
+    width: 5.5rem;
     filter: drop-shadow( 1px 1px 0px #000);
     color: #139905;
     animation: animadaImg 1s linear infinite alternate;
 }
 
 #git{
+    width: 5rem;
     filter: drop-shadow( 1px 1px 0px #000);
-    color: #E84D31;
     animation: animadaImg 1s linear infinite alternate;
 }
 
 .tux{
-    filter: drop-shadow( 1px 1px 0px #000);
-    width: 5.5rem;
+    filter: drop-shadow( 0px 0px 1px #8b8b8b);
+    width: 6rem;
     animation: animadaImg 1s linear infinite alternate;
 }
 
