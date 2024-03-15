@@ -1,26 +1,34 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+    <!-- meta tags essenciais -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Gilberto Lopes">
+    <title>Gilberto Lopes</title>
     <meta name="description" content="Gilberto Lopes - Fullstack developer 💻">
-    <meta name="keywords" content=" portfólio, portfolio, gilberto lopes, developer, desenvolvedor, programmer, full stack developer, front-end, back-end, javascript, html, css, nodejs, express">
+    <!-- meta tags para redes sociais -->
+    <meta property="og:title" content="Gilberto Lopes">
+    <meta property="og:description" content="Gilberto Lopes - Fullstack developer 💻">
+    <meta property="og:image" content="./src/public/assets/img/dev.png">
+    <meta property="og:url" content="https://developer-gilberto.github.io/portifolio-gilberto/">
+    <meta property="og:site_name" content="Portfolio Gilberto Lopes">
+    <meta property="og:type" content="website">
+    <meta property="article:author" content="Gilberto Lopes">
+    <meta name="author" content="Gilberto Lopes">
+    <!-- meta tag para mecanismos de busca (bot do google) -->
+    <meta name="robots" content="index, follow">
     <!-- favicon -->
     <link rel="shortcut icon" href="./src/public/assets/icons/favicon/favicon.ico" type="image/x-icon">
-    <!-- css desktop -->
+    <!-- pré-carregamento de recursos -->
+    <link rel="preload" href="./src/public/css/style_desktop.css" as="style">
+    <link rel="preload" href="./src/public/css/style_mobile.css" as="style">
+    <link rel="preload" href="./src/public/javascript/scripts.js" as="script">
+    <!-- CSS -->
     <link rel="stylesheet" href="./src/public/css/style_desktop.css">
-    <!-- css mobile -->
     <link rel="stylesheet" href="./src/public/css/style_mobile.css" media="screen">
     <!-- icons -->
     <link rel="stylesheet" href="./src/public/assets/icons/icons_remix/remixicon.css">
-    <!-- JavaScript -->
-    <script defer src="./src/public/javascript/scripts.js"></script>
-
-    <title>Gilberto Lopes</title>
-
 </head>
-
 <body>
 
     <!-- OVERLAY -->
@@ -74,7 +82,7 @@
             <div class="div-ul">
                 <ul>
                     <li>
-                        <img class="img-profile" src="./src/public/assets/img/gil-transparent-1x1.png" alt="Gilberto Lopes">
+                        <img class="img-profile" src="./src/public/assets/img/gil-500-1x1.png" alt="Gilberto Lopes">
                     </li>
                     <li>
                         <div class="container-email">
@@ -153,7 +161,7 @@
                 <i class="ri-html5-fill bx"></i>
                 <i class="ri-css3-fill bx"></i>
                 <i class="ri-javascript-fill bx"></i>
-                <img class="node_36x36px" src="./src/public/assets/icons/icons_remix/nodejs-icon-blue36x36.svg" alt="Node.js">
+                <img class="node_36x36px" src="./src/public/assets/icons/icons_SVG/nodejs-icon-blue36x36.svg" alt="Node.js">
             </div>
             <img class="img-dev-home" src="./src/public/assets/img/dev.png" alt="Developer">
         </section>
@@ -180,7 +188,7 @@
                     </p>
                 </div>
                 <div class="container-img-sobremim">
-                    <img class="img-gil-sobremim" src="./src/public/assets/img/gil-transparent-1x1.png" alt="Gilberto Lopes">
+                    <img class="img-gil-sobremim" src="./src/public/assets/img/gil-500-1x1.png" alt="Gilberto Lopes">
                 </div>
             </div>
         </section>
@@ -195,9 +203,9 @@
                         <i id="html" class="ri-html5-fill bx"></i>
                         <i id="css" class="ri-css3-fill bx"></i>
                         <i id="js" class="ri-javascript-fill bx"></i>
-                        <img id="node" class="node_36x36px" src="./src/public/assets/icons/icons_remix/nodejs-icon-green96x96.svg" alt="Node.js">
-                        <img id="git" src="./src/public/assets/icons/icons_remix/git-icon.svg" alt="Git">
-                        <img src="./src/public/assets/icons/icons_remix/linux-tux-icon.svg" alt="linux" class="tux">
+                        <img id="node" class="node_36x36px" src="./src/public/assets/icons/icons_SVG/nodejs-icon-green96x96.svg" alt="Node.js">
+                        <img id="git" src="./src/public/assets/icons/icons_SVG/git-icon.svg" alt="Git">
+                        <img src="./src/public/assets/icons/icons_SVG/linux-tux-icon.svg" alt="linux" class="tux">
                     </div>
                 </div>
                 <div class="container-soft-skills">
@@ -386,6 +394,9 @@
             <i id="btn-topo" class="ri-arrow-up-line bx"></i>
         </a>
     </footer>
+
+    <!-- JavaScript -->
+    <script defer src="./src/public/javascript/scripts.js"></script>
 
 </body>
 </html>
