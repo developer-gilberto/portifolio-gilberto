@@ -19,10 +19,6 @@
     <meta name="robots" content="index, follow">
     <!-- favicon -->
     <link rel="shortcut icon" href="./src/public/assets/icons/favicon/favicon.ico" type="image/x-icon">
-    <!-- pré-carregamento de recursos -->
-    <link rel="preload" href="./src/public/css/style_desktop.css" as="style">
-    <link rel="preload" href="./src/public/css/style_mobile.css" as="style">
-    <link rel="preload" href="./src/public/javascript/scripts.js" as="script">
     <!-- CSS -->
     <link rel="stylesheet" href="./src/public/css/style_desktop.css">
     <link rel="stylesheet" href="./src/public/css/style_mobile.css" media="screen">
@@ -352,20 +348,23 @@
                     <div class="container-label">
                         <label for="input-name">
                             <i class="ri-account-circle-line material-symbols-outlined"></i>
+                            Nome
                         </label>
                         <input id="input-name" class="input-form" type="text" name="name" placeholder="Digite seu nome" spellcheck="false" autocomplete="off" required>
                     </div>
                     <div class="container-label">
                         <label for="input-email">
                             <i class="ri-mail-line material-symbols-outlined"></i>
+                            E-mail
                         </label>
                         <input id="input-email" class="input-form" type="email" name="email" placeholder="Digite seu e-mail" spellcheck="false" autocomplete="off" required>
                     </div>
                     <div class="container-textarea">
                         <label for="textarea">
                             <i class="ri-message-2-line material-symbols-outlined"></i>
+                            Mensagem
                         </label>
-                        <textarea id="textarea" name="textarea" cols="30" rows="5" spellcheck="false" autocomplete="off" placeholder="Mensagem..."></textarea>
+                        <textarea id="textarea" name="message" cols="30" rows="5" spellcheck="false" autocomplete="off" placeholder="Sua mensagem..."></textarea>
                     </div>
                     <input type="hidden" name="_next" value="https://developer-gilberto.github.io/portifolio-gilberto/obrigado.html">
                     <input class="btn-form" type="submit" value="Enviar">

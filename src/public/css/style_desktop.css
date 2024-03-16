@@ -6,12 +6,14 @@
     src: url(../assets/fonts/Poppins/Poppins-Thin.ttf) format('truetype');
     font-weight: 100;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Poppins';
     src: url(../assets/fonts/Poppins/Poppins-ThinItalic.ttf) format('truetype');
     font-weight: 100;
     font-style: italic;
+    font-display: swap;
 }
 
 /* FONT-WEIGHT 200 */
@@ -20,12 +22,14 @@
     src: url(../assets/fonts/Poppins/Poppins-ExtraLight.ttf) format('truetype');
     font-weight: 200;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Poppins';
     src: url(../assets/fonts/Poppins/Poppins-ExtraLightItalic.ttf) format('truetype');
     font-weight: 200;
     font-style: italic;
+    font-display: swap;
 }
 
 /* FONT-WEIGHT 300 */
@@ -34,12 +38,14 @@
     src: url(../assets/fonts/Poppins/Poppins-Light.ttf) format('truetype');
     font-weight: 300;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Poppins';
     src: url(../assets/fonts/Poppins/Poppins-LightItalic.ttf) format('truetype');
     font-weight: 300;
     font-style: italic;
+    font-display: swap;
 }
 
 /* FONT-WEIGHT 400 */
@@ -48,12 +54,14 @@
     src: url(../assets/fonts/Poppins/Poppins-Regular.ttf) format('truetype');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Poppins';
     src: url(../assets/fonts/Poppins/Poppins-Italic.ttf) format('truetype');
     font-weight: 400;
     font-style: italic;
+    font-display: swap;
 }
 
 /* FONT-WEIGHT 500 */
@@ -62,12 +70,14 @@
     src: url(../assets/fonts/Poppins/Poppins-Medium.ttf) format('truetype');
     font-weight: 500;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Poppins';
     src: url(../assets/fonts/Poppins/Poppins-MediumItalic.ttf) format('truetype');
     font-weight: 500;
     font-style: italic;
+    font-display: swap;
 }
 
 /* FONT-WEIGHT 700 */
@@ -76,12 +86,14 @@
     src: url(../assets/fonts/Poppins/Poppins-Bold.ttf) format('truetype');
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Poppins';
     src: url(../assets/fonts/Poppins/Poppins-BoldItalic.ttf) format('truetype');
     font-weight: 700;
     font-style: italic;
+    font-display: swap;
 }
 
 /* FONT-WEIGHT 800 */
@@ -90,12 +102,14 @@
     src: url(../assets/fonts/Poppins/Poppins-ExtraBold.ttf) format('truetype');
     font-weight: 800;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Poppins';
     src: url(../assets/fonts/Poppins/Poppins-ExtraBoldItalic.ttf) format('truetype');
     font-weight: 800;
     font-style: italic;
+    font-display: swap;
 }
 
 /* FONT-WEIGHT 900 */
@@ -104,12 +118,14 @@
     src: url(../assets/fonts/Poppins/Poppins-Black.ttf) format('truetype');
     font-weight: 900;
     font-style: normal;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Poppins';
     src: url(../assets/fonts/Poppins/Poppins-BlackItalic.ttf) format('truetype');
     font-weight: 900;
     font-style: italic;
+    font-display: swap;
 }
 
 /* RESET CSS */
@@ -403,6 +419,7 @@ header{
 
 .img-profile{
     max-width: 100px;
+    height: auto;
     background-image: linear-gradient(to top, var(--black-white), var(--secundaria));
     border: .0625rem solid var(--subtitulo);
     border-radius: 50%;
@@ -713,8 +730,14 @@ code{
     font-size: 36px;
 }
 
+.node_36x36px{
+    width: 36px;
+    height: auto;
+}
+
 .img-dev-home{
     max-width: 120px;
+    height: auto;
     margin-top: 1rem;
     animation: animaDev 1s linear infinite alternate-reverse;
 }
@@ -774,6 +797,7 @@ code{
 
 .img-dev-sobremim{
     max-width: 50px;
+    height: auto;
     filter: drop-shadow(0px 0px 1px var(--destaque));
 }
 
@@ -855,6 +879,7 @@ cite{
     /* filter: drop-shadow(0px 0px 5px var(--destaque)); */
     background-image: linear-gradient(to top, var(--black-white), var(--secundaria));
     max-width: 100%;
+    height: auto;
     border-radius: 50%;    
 }
 
@@ -931,6 +956,7 @@ cite{
 
 #node{
     width: 5.5rem;
+    height: auto;
     filter: drop-shadow( 1px 1px 0px #000);
     color: #139905;
     animation: animadaImg 1s linear infinite alternate;
@@ -938,6 +964,7 @@ cite{
 
 #git{
     width: 5rem;
+    height: auto;
     filter: drop-shadow( 1px 1px 0px #000);
     animation: animadaImg 1s linear infinite alternate;
 }
@@ -945,6 +972,7 @@ cite{
 .tux{
     filter: drop-shadow( 0px 0px 1px #8b8b8b);
     width: 6rem;
+    height: auto;
     animation: animadaImg 1s linear infinite alternate;
 }
 
@@ -1157,6 +1185,14 @@ em{
     border-radius: 20px;
 }
 
+#contato form label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--destaque);
+    cursor: pointer;
+}
+
 .container-label{
     display: flex;
     flex-direction: column;
@@ -1225,7 +1261,7 @@ em{
     margin-top: 1.25rem;
     border: 1px solid var(--secundaria);
     color: var(--secundaria);
-    background-color: #f2edff;
+    background-color: #f5f5f7;
     transition: .3s ease-in-out;
     cursor: pointer;
     border-radius: 1.25rem;
@@ -1235,7 +1271,7 @@ em{
  #contato .btn-form:hover{
     background-color: var(--destaque);
     border: 1px solid var(--destaque);
-    color: #f2edff;
+    color: #f5f5f7;
 }
 
 /* FOOTER */
