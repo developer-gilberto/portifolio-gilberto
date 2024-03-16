@@ -123,24 +123,24 @@ window.addEventListener('scroll', () => {
 // BOAS VINDAS AO USUÁRIO
 
 const btnComoQuerSerChamado = document.querySelector('.btn-como-quer-ser-chamado');
+const spanUserName = document.querySelectorAll('.user-name');
 
 btnComoQuerSerChamado.addEventListener('click', () => {
 
-    const spanUserName = document.querySelectorAll('.user-name');
     const userName = prompt('DIGITE SEU NOME...', "visitante");
+    
+    localStorage.setItem('userName', JSON.stringify(userName));
 
     spanUserName.forEach(name => {
-
-        name.innerText = ` ${userName.toLocaleUpperCase()}`;
+        const userNameLocalStorage = JSON.parse(localStorage.getItem('userName'));
+        name.innerText = ` ${userNameLocalStorage.toLocaleUpperCase()}`;
     });
 
     const data = new Date();
     let horaAtual = data.getHours();
-    // Descomente a linha abaixo para TESTAR AS HORAS MANUALMENTE
-    // let horaAtual = 6;
+    // let horaAtual = 6; // <<= TESTAR AS HORAS MANUALMENTE
     let cumprimentos;
     const bomDiaTardeNoite = document.querySelector('.bomDiaTardeNoite');
-    const mensagemPraUsuarioNoForm = document.querySelector('.mensagemPraUsuarioForm');
 
         if(horaAtual == 0 || horaAtual < 6){
             cumprimentos = 'Boa madrugada';
@@ -155,7 +155,7 @@ btnComoQuerSerChamado.addEventListener('click', () => {
             cumprimentos = 'Boa noite';
         };
         
-        if(userName == null || userName == "" || userName == undefined){
+        if(userName == null || userName == "" || userName == undefined || userName == " "){
 
             alert(`[ERRO] \n Ops! Parece que você não digitou seu nome. \n Por favor tente novamente.`);
             
@@ -164,10 +164,49 @@ btnComoQuerSerChamado.addEventListener('click', () => {
         else {
             bomDiaTardeNoite.innerText = cumprimentos;
 
-            mensagemPraUsuarioNoForm.innerHTML = `Então <span class="user-name">${userName.toUpperCase()}</span>, gostou? Entre em contato através do formulário abaixo ou através das minhas redes sociais para contratar-me, dar dicas, sugestões de melhorias ou até mesmo relatar bugs. Estou à sua disposição ; )`
+            document.querySelector('.mensagemPraUsuarioForm').innerHTML = `Então <span class="user-name">${userName.toUpperCase()}</span>, gostou? Entre em contato através do formulário abaixo ou através das minhas redes sociais para contratar-me, dar dicas, sugestões de melhorias ou até mesmo relatar bugs. Estou à sua disposição ; )`
 
             openCloseMenu();
         };
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const userNameLocalStorage = JSON.parse(localStorage.getItem('userName'));
+
+    let cumprimentos;
+    const bomDiaTardeNoite = document.querySelector('.bomDiaTardeNoite');
+
+    const data = new Date();
+    let horaAtual = data.getHours();
+
+    if(horaAtual == 0 || horaAtual < 6){
+        cumprimentos = 'Boa madrugada';
+    }
+    else if(horaAtual >= 6 && horaAtual < 12){
+        cumprimentos = 'Bom dia';
+    }
+    else if(horaAtual >= 12 && horaAtual < 18){
+        cumprimentos = 'Boa tarde';
+    }
+    else if(horaAtual >= 18 && horaAtual <= 23){
+        cumprimentos = 'Boa noite';
+    };
+
+    bomDiaTardeNoite.innerText = cumprimentos;
+
+    if(!userNameLocalStorage){
+        spanUserName.forEach(name => {
+            name.innerText = "";
+        });
+        return;
+    }
+    spanUserName.forEach(name => {
+        
+        name.innerText = ` ${userNameLocalStorage.toLocaleUpperCase()}`;
+
+        document.querySelector('.mensagemPraUsuarioForm').innerHTML = `Então <span class="user-name">${userNameLocalStorage.toUpperCase()}</span>, gostou? Entre em contato através do formulário abaixo ou através das minhas redes sociais para contratar-me, dar dicas, sugestões de melhorias ou até mesmo relatar bugs. Estou à sua disposição ; )`
+    });
 });
 
 // ATUALIZAR ANO DE: "All rights reserved (ano atual)"
