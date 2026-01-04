@@ -1,122 +1,136 @@
-@media screen and (max-width: 980px){
+@media screen and (max-width: 980px) {
+  .nav-desktop {
+    display: none;
+  }
+  code {
+    font-size: 16px;
+  }
+  .boas-vindas {
+    font-size: 1rem;
+    margin-top: 71px;
+  }
+  .eu-sou {
+    font-size: 1.5rem;
+  }
+  .gilberto-lopes {
+    font-size: 4rem;
+  }
+  .full-stack {
+    font-size: 1.1rem;
+  }
+  .chaves-full-stack {
+    font-size: 1.1rem;
+  }
 
-    .nav-desktop{
-        display: none;
-    }
-    code{
-        font-size: 16px;
-    }
-    .boas-vindas{
-        font-size: 1rem;
-        margin-top: 71px;
-    }
-    .eu-sou{
-        font-size: 1.5rem;
-    }
-    .gilberto-lopes{
-        font-size: 4rem;
-    }
-    .full-stack{
-        font-size: 1.1rem;
-    }
-    .chaves-full-stack{
-        font-size: 1.1rem;
-    }
+  .container-sobre {
+    flex-direction: column-reverse;
+  }
 
-    .container-sobre{
-        flex-direction: column-reverse;
-    }
+  .container-texto-sobremim {
+    max-width: 700px;
+  }
 
-    .container-texto-sobremim{
-        max-width: 700px;
-    }
+  .container-texto-sobremim p {
+    margin-right: 0rem;
+  }
 
-    .container-texto-sobremim p{
-        margin-right: 0rem;
-    }
+  h3 {
+    margin: 0.625rem;
+  }
 
-    h3{
-        margin: .625rem;
-    }
+  .container-projetos {
+    padding: 0;
+  }
 
-    .container-projetos{
-        padding: 0;
-    }
-    
-    blockquote{
-        margin-right: 0rem;
-    }
+  blockquote {
+    margin-right: 0rem;
+  }
 }
 
-@media screen and (max-width: 650px){
+@media screen and (max-width: 650px) {
+  #home {
+    padding-top: 71px;
+  }
 
-    #home{
-        padding-top: 71px;
-    }
+  .gilberto-lopes {
+    font-size: 2rem;
+  }
 
-    .gilberto-lopes{
-        font-size: 2rem;
-    }
+  .img-dev-home {
+    max-width: 90px;
+  }
 
-    .img-dev-home{
-        max-width: 90px;
-    }
+  #skills {
+    padding-top: 71px;
+  }
 
-    #skills{
-        padding-top: 71px;
-    }
+  .container-skills {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .container-skills{
-        flex-direction: column;
-        align-items: center;
-    }
+  .container-hard-skills {
+    width: 100%;
+    align-items: center;
+  }
 
-    .container-hard-skills{
-        width: 300px;
-    }
-    .container-soft-skills{
-        width: 100%;
-        margin-top: 1.25rem;
-    }
+  .container-icons-skills {
+    justify-content: space-around;
+  }
 
-    .container-hard-skills .bx{
-        font-size: 4rem;
-    }
-    #node{
-        width: 4rem;
-    }
-    #git{
-        width: 3.6rem;
-    }
-    .tux{
-        width: 4.3rem;
-    }
+  .container-icon-title img {
+    width: 3rem;
+  }
 
-    footer #btn-topo{
-        font-size: 35px;
-    }
+  .icons-hardskills {
+    width: 2rem;
+  }
 
+  .container-soft-skills {
+    width: 100%;
+    margin-top: 1.25rem;
+  }
+
+  .container-soft-skills li {
+    font-size: 1rem;
+  }
+
+  .container-hard-skills .bx {
+    font-size: 4rem;
+  }
+  #node {
+    width: 4rem;
+  }
+  #git {
+    width: 3.6rem;
+  }
+  .tux {
+    width: 4.3rem;
+  }
+
+  footer #btn-topo {
+    font-size: 35px;
+  }
 }
 
-@media screen and (max-width: 350px){
-    code{
-        font-size: 14px;
-    }
+@media screen and (max-width: 350px) {
+  code {
+    font-size: 14px;
+  }
 }
 
 /* DISPOSITIVO NA ORIENTAÇÃO PAISAGEM */
 
-@media screen and (orientation: landscape){
+@media screen and (orientation: landscape) {
+  #home {
+    padding: 71px 1.25rem;
+  }
 
-    #home{
-        padding: 71px 1.25rem;
-    }
+  #skills {
+    padding: 71px 1.25rem;
+  }
 
-    #skills{
-        padding: 71px 1.25rem;
-    }
-    
-    #projetos{
-        padding: 71px 1.25rem;
-    }
+  #projetos {
+    padding: 71px 1.25rem;
+  }
 }
