@@ -87,18 +87,23 @@
                         </div>
                     </li>
                     <li>
+                        <a id="cv-menu-mobile" href="./src/public/assets/documents/curriculo-gilberto.pdf" download="curriculo-gilberto.pdf">
+                            <i class="ri-file-download-line bx"></i> Currículo
+                        </a>
+                    </li>
+                    <li>
                         <div class="container-sociais">
                             <a href="https://github.com/developer-gilberto" target="_blank" rel="noopener noreferrer">
                                 <i class="ri-github-fill bx"></i>
                             </a>
-                            <a href="https://www.instagram.com/developer.gilberto/" target="_blank" rel="noopener noreferrer">
-                                <i class="ri-instagram-line bx"></i>
-                            </a>
-                            <a id="linkedin" href="#">
+                            <a id="linkedin" href="https://linkedin.com/in/gilbertolopes-dev" target="_blank" rel="noopener noreferrer">
                                 <i class="ri-linkedin-box-fill bx"></i>
                             </a>
-                            <a id="yt" href="#">
+                            <a id="yt" href="https://www.youtube.com/@codigodesbugado" target="_blank" rel="noopener noreferrer">
                                 <i class="ri-youtube-fill bx"></i>
+                            </a>
+                            <a href="https://www.instagram.com/developer.gilberto/" target="_blank" rel="noopener noreferrer">
+                                <i class="ri-instagram-line bx"></i>
                             </a>
                         </div>
                     </li>
@@ -144,13 +149,13 @@
             </code>
             <p class="boas-vindas">
                 <span class="bomDiaTardeNoite"></span> <span class="user-name"></span><br>
-                É um prazer receber sua agradável visita ao meu site. Seja muito bem vindo(a)! Espero que goste.
+                <span id="msg-welcome"></span>
             </p>
             <p class="eu-sou">Eu sou</p>
             <h1 class="gilberto-lopes">Gilberto Lopes</h1>
             <p class="full-stack">
                 <span class="chaves-full-stack">{</span>
-                        Full stack developer
+                    Desenvolvedor Full Stack
                 <span class="chaves-full-stack">}</span>
             </p>
             <div class="container-tecnologias">
@@ -167,13 +172,13 @@
                     <h3>👋 Olá<span class="user-name"></span>, meu nome é Gilberto Lopes</h3>
                     <div class="container-img-developer">
                         <img class="img-dev-sobremim" src="./src/public/assets/img/dev.png" alt="Developer">
-                        <p>Desenvolvedor web full stack.</p>
+                        <p>Desenvolvedor Full Stack</p>
                     </div><br>
                     <p>
-                        Estou estudando programação para realizar o maior sonho da minha vida: me tornar um programador profissional e trabalhar com desenvolvimento de software.
+                        Desenvolvedor full stack com experiência prática em integração de APIs de terceiros utilizando OAuth, além de proteção de rotas, autenticação e autorização com JWT. Criador do SaaS ShopTurbo, um sistema ERP com integração com API oficial da Shopee. Possuo experiência no desenvolvimento de projetos frontend e backend desde a concepção até chegar ao deploy, incluindo levantamento de requisitos com cliente, aquisição de domínio, configuração de DNS, subdomínios e conexão com bancos de dados externos. Sou entusiasta, fã e usuário do ecossistema Linux. Além disso, criei um canal no YouTube(@codigodesbugado) para ajudar iniciantes entender conceitos de programação.
                     </p>
                     <p>
-                        Estou sempre buscando evoluir e aprender através de projetos práticos, estudo constante e boas práticas de desenvolvimento. Me considero desenvolvedor web fullstack, com um carinho especial ao backend.
+                        Aberto a oportunidades que me permitam aprender, crescer e contribuir de forma prática em projetos que geram valor na empresa e nas pessoas.
                     </p><br>
                     <p>
                         <blockquote>🧐 "Entender como é feito as coisas por trás da tela deste dispositivo que você está lendo neste exato momento. Poder me comunicar com o computador através de códigos que somente eu e ele entendemos. Programá-lo para que resolva problemas complexos da vida real por mim. Isso é FASCINANTE! Isso é ser <strong>PROGRAMADOR</strong>." 🧑‍💻</blockquote>
@@ -279,11 +284,12 @@
                     <h3>👍 Soft Skills</h3>
                     <div>
                         <ul>
-                            <li>🤝 Facilidade em me relacionar com pessoas</li>
+                            <li>🤝 Tenho muita facilidade em me relacionar com as pessoas</li>
+                            <li>🎯 Busco dar meu melhor em tudo que faço</li>
+                            <li>👂 Estou sempre aberto à críticas e opniões</li>
+                            <li>🛡️ Responsável</li>
                             <li>💬 Comunicativo</li>
-                            <li>🎯 Compromisso</li>
-                            <li>🛡️ Responsabilidade</li>
-                            <li>🧐 Vontade de aprender</li>
+                            <li>🧐 Possuo muita vontade de aprender ainda mais</li>
                         </ul>
                     </div>
                 </div>
@@ -293,14 +299,11 @@
         <!-- SECTION PROJETOS -->
         <section id="projetos">
             <h2>PROJETOS</h2>
-            <p>Então<span class="user-name"></span>, aqui você encontra alguns dos projetos que fiz com o objetivo de <em>praticar</em> e <em>validar</em> meus conhecimentos em programação. Clique em "Visitar projeto" para acessar o deploy do projeto ou, caso queira analisar o código e saber como o projeto foi desenvolvido, clique em "Código fonte". <strong class="projetos_responsivos">Todos os projetos são responsivos.</strong> exceto o shopturbo que ainda está em desenvolvimento.</p>
+            <p>Então<span class="user-name"></span>, aqui você encontra alguns dos projetos que fiz com o objetivo de <em>praticar</em> e <em>validar</em> meus conhecimentos em programação. Clique em "Visitar projeto" para acessar o deploy do projeto ou, caso queira analisar o código e saber como o projeto foi desenvolvido, clique em "Código fonte". <strong class="projetos_responsivos">Todos os projetos são responsivos,</strong> exceto o shopturbo que ainda está em desenvolvimento.</p>
             <div class="container-projetos">
                 <div class="card-projetos">
-                    <h3>ERP ShopTurbo</h3>
+                    <h3>ShopTurbo ERP</h3>
                     <div>
-                        <!--<i class="ri-html5-fill bx orange5 bxl-html5"></i>
-                        <i class="ri-css3-fill bx blue3 bxl-css3"></i>
-                        <i class="ri-javascript-fill bx bxl-javascript"></i>-->
                     </div>
                     <div class="iphone">
                         <img src="./src/public/assets/img/shopturbo-print.png" alt="ShopTurbo">
@@ -314,11 +317,8 @@
                     </a>
                 </div>
                 <div class="card-projetos">
-                    <h3>API ShopTurbo</h3>
+                    <h3>ShopTurbo API</h3>
                     <div>
-                        <!--<i class="ri-html5-fill bx orange5 bxl-html5"></i>
-                        <i class="ri-css3-fill bx blue3 bxl-css3"></i>
-                        <i class="ri-javascript-fill bx bxl-javascript"></i>-->
                     </div>
                     <div class="iphone">
                         <img src="./src/public/assets/img/shopturbo-api.png" alt="API-ShopTurbo">
@@ -334,9 +334,6 @@
                 <div class="card-projetos">
                     <h3>Funny rede social</h3>
                     <div>
-                        <!--<i class="ri-html5-fill bx orange5 bxl-html5"></i>
-                        <i class="ri-css3-fill bx blue3 bxl-css3"></i>
-                        <i class="ri-javascript-fill bx bxl-javascript"></i>-->
                     </div>
                     <div class="iphone">
                         <img src="./src/public/assets/img/funny.png" alt="Funny">
@@ -352,9 +349,6 @@
                 <div class="card-projetos">
                     <h3>Calculadora</h3>
                     <div>
-                        <!--<i class="ri-html5-fill bx orange5 bxl-html5"></i>
-                        <i class="ri-css3-fill bx blue3 bxl-css3"></i>
-                        <i class="ri-javascript-fill bx bxl-javascript"></i>-->
                     </div>
                     <div class="iphone">
                         <img src="./src/public/assets/img/calculadora_JS.png" alt="calculadora">
@@ -370,9 +364,6 @@
                 <div class="card-projetos">
                     <h3>Portifólio Gilberto</h3>
                     <div>
-                        <!--<i class="ri-html5-fill bx orange5 bxl-html5"></i>
-                        <i class="ri-css3-fill bx blue3 bxl-css3"></i>
-                        <i class="ri-javascript-fill bx bxl-javascript"></i>-->
                     </div>
                     <div class="iphone">
                         <img src="./src/public/assets/img/portfolio_gilberto.png" alt="Portifólio Gilberto">
@@ -389,9 +380,6 @@
                 <div class="card-projetos">
                     <h3>Biomédica Dhara</h3>
                     <div>
-                        <!--<i class="ri-html5-fill bx orange5 bxl-html5"></i>
-                        <i class="ri-css3-fill bx blue3 bxl-css3"></i>
-                        <i class="ri-javascript-fill bx bxl-javascript"></i>-->
                     </div>
                     <div class="iphone">
                         <img src="./src/public/assets/img/biomedica_dhara.png" alt="Projeto Biomédica">
@@ -408,8 +396,6 @@
                 <div class="card-projetos">
                     <h3>Portifólio</h3>
                     <div>
-                        <!--<i class="ri-html5-fill bx orange5 bxl-html5"></i>
-                        <i class="ri-css3-fill bx blue3 bxl-css3"></i>-->
                     </div>
                     <div class="iphone">
                         <img src="./src/public/assets/img/portifolio-teste2.png" alt="Projeto Portifólio teste">
@@ -426,8 +412,6 @@
                 <div class="card-projetos">
                     <h3>Cordel moderno</h3>
                     <div>
-                        <!--<i class="ri-html5-fill bx orange5 bxl-html5"></i>
-                        <i class="ri-css3-fill bx blue3 bxl-css3"></i>-->
                     </div>
                     <div class="iphone">
                         <img src="./src/public/assets/img/cordel-moderno2.png" alt="Projeto Cordel Moderno">
@@ -444,8 +428,6 @@
                 <div class="card-projetos">
                     <h3>Mascote do Android</h3>
                     <div>
-                        <!--<i class="ri-html5-fill bx orange5 bxl-html5"></i>
-                        <i class="ri-css3-fill bx blue3 bxl-css3"></i>-->
                     </div>
                     <div class="iphone">
                         <img src="./src/public/assets/img/mascote-android2.png" alt="Projeto Mascote Android">
@@ -464,34 +446,43 @@
 
         <!-- SECTION CONTATO -->
         <section id="contato">
+            <h2>CONTATO</h2>
             <p class="mensagemPraUsuarioForm"></p>
-            <form action="https://formsubmit.co/developer.gilberto@gmail.com" method="POST">
-                <h2>CONTATO</h2>
-                    <div class="container-label">
-                        <label for="input-name">
-                            <i class="ri-account-circle-line material-symbols-outlined"></i>
-                            Nome
-                        </label>
-                        <input id="input-name" class="input-form" type="text" name="name" placeholder="Digite seu nome" spellcheck="false" autocomplete="off" required>
-                    </div>
-                    <div class="container-label">
-                        <label for="input-email">
-                            <i class="ri-mail-line material-symbols-outlined"></i>
-                            E-mail
-                        </label>
-                        <input id="input-email" class="input-form" type="email" name="email" placeholder="Digite seu e-mail" spellcheck="false" autocomplete="off" required>
-                    </div>
-                    <div class="container-textarea">
-                        <label for="textarea">
-                            <i class="ri-message-2-line material-symbols-outlined"></i>
-                            Mensagem
-                        </label>
-                        <textarea id="textarea" name="message" cols="30" rows="5" spellcheck="false" autocomplete="off" placeholder="Sua mensagem..."></textarea>
-                    </div>
-                    <input type="hidden" name="_next" value="https://developer-gilberto.github.io/portifolio-gilberto/obrigado.html">
-                    <input class="btn-form" type="submit" value="Enviar">
-                    <input class="btn-form" type="reset" value="Limpar">
-           </form>
+            <ul class="container-links-contato">
+                <li>
+                    <img class="img-profile" src="./src/public/assets/img/gil-500-1x1.png" alt="Gilberto Lopes">
+                </li>
+                <li>
+                    <a href="./src/public/assets/documents/curriculo-gilberto.pdf" download="curriculo-gilberto.pdf">
+                        <i class="ri-file-download-line bx"></i> Currículo
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:developer.gilberto@gmail.com">
+                        <i class="ri-mail-line material-symbols-outlined"></i> Email
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/developer-gilberto" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-github-fill bx"></i> GitHub
+                    </a>
+                </li>
+                <li>
+                    <a id="linkedin" href="https://linkedin.com/in/gilbertolopes-dev" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-linkedin-box-fill bx"></i> LinkedIn
+                    </a>
+                </li>
+                <li>
+                    <a id="yt" href="https://www.youtube.com/@codigodesbugado" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-youtube-fill bx"></i> YouTube
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/developer.gilberto/" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-instagram-line bx"></i> Instagram
+                    </a>
+                </li>
+            </ul>
         </section>
 
     </main>
